@@ -45,6 +45,12 @@ let offer = confirm("Is the offer expired?");
 //let offerEx = "Sorry but the offer has expired";
 let premiumStat = confirm("Are you a premium member?");
 let itemCount = confirm("Are there more than two items?");
+
+
+
+
+
+/*
 let premiumMem = premiumStat && !offer;
 let plebMem = (itemCount == true) && !offer;
 if(premiumMem === 1) {
@@ -53,6 +59,8 @@ if(premiumMem === 1) {
 else if(plebMem === 1) {
     alert("Thank you for shopping with us...pleb");
 }
+*/
+ */
 //else {"The offer is expired at this time"};
 
 
