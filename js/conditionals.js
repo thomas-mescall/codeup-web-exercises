@@ -191,6 +191,7 @@ function calculateTotal(x,y){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
+/*
 var luckyNumber = Math.floor(Math.random() * 6);
 var totalBill = prompt("What is your total bill?");
 var luckyTotal = calculateTotal(luckyNumber, totalBill);
@@ -198,7 +199,7 @@ var luckyTotal = calculateTotal(luckyNumber, totalBill);
 alert("Your lucky number is: " + luckyNumber);
 alert("Your price before your discount was $" + totalBill);
 alert("Your price after the discount is $" + luckyTotal);
-
+*/
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -216,4 +217,65 @@ alert("Your price after the discount is $" + luckyTotal);
  *
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
+ */
+
+//*************CHAT GPT*************
+if (confirm("Would you like to enter a number?")) {
+    let num = prompt("Please enter a number:");
+    if (num % 2 === 0) {
+        alert("The number is even.");
+    } else {
+        alert("The number is odd.");
+    }
+    alert("The number plus 100 is " + (num + 100) + ".");
+    if (num >= 0) {
+        alert("The number is positive.");
+    } else {
+        alert("The number is negative.");
+    }
+}
+//************************************
+
+/*
+var numQ = confirm("Would you like to enter a number?");
+var x = prompt("Please enter a vaild number");
+if(numQ === true) {
+
+    if(x%2==0) {
+        alert("Your number is even");
+    } else{"Your number is odd"};
+    //alert("Your number + 100 = "x+100);
+    if(x<0){
+        alert("Your number is even");
+    } else("Your number is odd");
+}
+function numManip() {
+    var y = confirm("Would you like to enter a number?");
+    if (y) {
+        function numS(x) {
+            var x = prompt("Please enter your number");
+
+    else
+        {
+            alert("Please enter a valid number")
+        }
+        ;
+        if (x % 2 == 0) {
+            alert("The number you have entered is even");
+        } else if (x % 2 != 0) {
+            alert("The number you have entered is odd");
+        }
+        alert("Your number plus 100 is: "
+        x + 100
+    )
+        ;
+        if (x < 0) {
+            alert("The number you have entered is negative");
+        } else if (x > 0) {
+            alert("The number you have entered is positive");
+        }
+    }
+  }
+}
+
  */
