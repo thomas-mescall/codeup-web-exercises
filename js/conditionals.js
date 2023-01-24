@@ -219,7 +219,7 @@ alert("Your price after the discount is $" + luckyTotal);
  * HINT: The way we prompt for a value could be improved
  */
 
-//*************CHAT GPT*************
+
 if (confirm("Would you like to enter a number?")) {
     let num = prompt("Please enter a number:");
     if (num % 2 === 0) {
@@ -227,6 +227,7 @@ if (confirm("Would you like to enter a number?")) {
     } else {
         alert("The number is odd.");
     }
+    num = Number(num);
     alert("The number plus 100 is " + (num + 100) + ".");
     if (num >= 0) {
         alert("The number is positive.");
@@ -234,7 +235,7 @@ if (confirm("Would you like to enter a number?")) {
         alert("The number is negative.");
     }
 }
-//************************************
+
 
 /*
 var numQ = confirm("Would you like to enter a number?");
