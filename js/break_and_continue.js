@@ -3,19 +3,10 @@
 // Your output should look like this: Number to skip is: 27
 //
 // ask for user input; if wrong, keep asking; build loop to print all numbers between 1 - 50 excluding user input.
-/*
-for(let i = 0; i < 2; i++) {
-    let numQ = prompt("What is a number between 1 - 50?");
-        if (1 < numQ < 50) {
-            break;
-        } else {
-            alert("Your number is invalid");
-        }
-}
- */
+
 //loop to ask user input and check for odd
 do {
-    let numQ = prompt("Enter an odd number");
+    let numQ = parseInt(prompt("Enter an odd number"));
     if((1 < numQ < 50) && (numQ % 2 != 0)) {
         alert("Nice");
         //loop to output odd numbers while skipping input

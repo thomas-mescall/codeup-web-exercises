@@ -21,30 +21,27 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-/*
-function analyzeColor(x) {
-    //x = prompt("name a color")
-    if (x == 'red') {
-        return ("red is the color of Mars");
-    } else if (x == 'blue') {
-        return ("blue is the color of the sky");
-    } else if (x == 'yellow') {
-        return ("yellow is the color of the Sun");
-    } else if (x == 'orange') {
-        return ("orange is the color of an orange");
-    }
-      else if (x == 'green') {
-        return("green is the color of grass");
-    }
-      else if (x == 'indigo') {
-          return("indigo is the color of royalty");
-    }
-      else if (x == 'violet') {
-          return("violet is a color that I can't think of anything for -_-")
-    }
-    else{return("That color does not exist")};
-}
-*/
+
+// function analyzeColor(x) {
+//     //x = prompt("name a color")
+//     if (x == 'red') {
+//         return ("red is the color of Mars");
+//     } else if (x == 'blue') {
+//         return ("blue is the color of the sky");
+//     } else if (x == 'yellow') {
+//         return ("yellow is the color of the Sun");
+//     } else if (x == 'orange') {
+//         return ("orange is the color of an orange");
+//     } else if (x == 'green') {
+//         return("green is the color of grass");
+//     } else if (x == 'indigo') {
+//           return("indigo is the color of royalty");
+//     } else if (x == 'violet') {
+//           return("violet is a color that I can't think of anything for -_-")
+//     } else{
+//         return("That color does not exist")};
+// }
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -180,7 +177,6 @@ function calculateTotal(x,y){
             return "please enter valid input";
             break;
     }
-
 }
 /**
  * TODO:
@@ -191,7 +187,7 @@ function calculateTotal(x,y){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-/*
+
 var luckyNumber = Math.floor(Math.random() * 6);
 var totalBill = prompt("What is your total bill?");
 var luckyTotal = calculateTotal(luckyNumber, totalBill);
@@ -199,7 +195,7 @@ var luckyTotal = calculateTotal(luckyNumber, totalBill);
 alert("Your lucky number is: " + luckyNumber);
 alert("Your price before your discount was $" + totalBill);
 alert("Your price after the discount is $" + luckyTotal);
-*/
+
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -220,21 +216,21 @@ alert("Your price after the discount is $" + luckyTotal);
  */
 
 
-if (confirm("Would you like to enter a number?")) {
-    let num = prompt("Please enter a number:");
-    if (num % 2 === 0) {
-        alert("The number is even.");
-    } else {
-        alert("The number is odd.");
-    }
-    num = Number(num);
-    alert("The number plus 100 is " + (num + 100) + ".");
-    if (num >= 0) {
-        alert("The number is positive.");
-    } else {
-        alert("The number is negative.");
-    }
-}
+// if (confirm("Would you like to enter a number?")) {
+//     let num = prompt("Please enter a number:");
+//     if (num % 2 === 0) {
+//         alert("The number is even.");
+//     } else {
+//         alert("The number is odd.");
+//     }
+//     num = Number(num);
+//     alert("The number plus 100 is " + (num + 100) + ".");
+//     if (num >= 0) {
+//         alert("The number is positive.");
+//     } else {
+//         alert("The number is negative.");
+//     }
+// }
 
 
 /*
