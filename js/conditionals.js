@@ -188,13 +188,13 @@ function calculateTotal(x,y){
  */
 // Generate a random number between 0 and 6
 
-var luckyNumber = Math.floor(Math.random() * 6);
-var totalBill = prompt("What is your total bill?");
-var luckyTotal = calculateTotal(luckyNumber, totalBill);
-//var newBill = totalBill * luckyTotal;
-alert("Your lucky number is: " + luckyNumber);
-alert("Your price before your discount was $" + totalBill);
-alert("Your price after the discount is $" + luckyTotal);
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var totalBill = prompt("What is your total bill?");
+// var luckyTotal = calculateTotal(luckyNumber, totalBill);
+// //var newBill = totalBill * luckyTotal;
+// alert("Your lucky number is: " + luckyNumber);
+// alert("Your price before your discount was $" + totalBill);
+// alert("Your price after the discount is $" + luckyTotal);
 
 /**
  * TODO:
@@ -216,21 +216,24 @@ alert("Your price after the discount is $" + luckyTotal);
  */
 
 
-// if (confirm("Would you like to enter a number?")) {
-//     let num = prompt("Please enter a number:");
-//     if (num % 2 === 0) {
-//         alert("The number is even.");
-//     } else {
-//         alert("The number is odd.");
-//     }
-//     num = Number(num);
-//     alert("The number plus 100 is " + (num + 100) + ".");
-//     if (num >= 0) {
-//         alert("The number is positive.");
-//     } else {
-//         alert("The number is negative.");
-//     }
-// }
+if (confirm("Would you like to enter a number?")) {
+    let num = prompt("Please enter a number:");
+    if(num === NaN) {
+        alert("That is not a number!!!")
+    }
+    if (num % 2 === 0) {
+        alert("The number is even.");
+    } else {
+        alert("The number is odd.");
+    }
+    num = Number(num);
+    alert("The number plus 100 is " + (num + 100) + ".");
+    if (num >= 0) {
+        alert("The number is positive.");
+    } else {
+        alert("The number is negative.");
+    }
+}
 
 
 /*
