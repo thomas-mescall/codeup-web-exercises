@@ -137,7 +137,7 @@ function createBook(titleIn, authorIn) {
     var books = [
         {title: title, author: author}
     ];
-    function showBookInfo(createBook) {
+    function showBookInfo() {
         console.log("Title: " + books.title);
         console.log("Author: " + books.author);
     }
