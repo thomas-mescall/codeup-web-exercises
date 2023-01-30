@@ -3,9 +3,9 @@
 //2) creating for loop within a function that takes in a number and spits out the number multiplied incremently up to 10.
 
 // function showMultiplicationTable(x) {
-//     for(let i = 0; i <= 10; i++) {
+//     for(let i = 1; i <= 10; i++) {
 //         let num = i * x;
-//         console.log(num);
+//         console.log(x + " x " + i + " = " + num);
 //
 //     }
 // }
@@ -15,12 +15,13 @@
 // 3) Use code from #1 to generate 10 numbers (20 < x < 200) and tell whether even or odd (x%2 == 0) || (x%2 != 0) using a loop.
 
 // function showMultiplicationTable() {
-//     for(let i = 0; i < 10; i++) {
-//         let num = (Math.round(Math.random() * (200 - 20) + 20));
+//     for(var i = 0; i < 10; i++) {
+//         var num = (Math.round(Math.random() * (200 - 20) + 20));
 //         if(num % 2 == 0) {
-//             return("Your number is even: " + num);
+//             console.log("Your number is even: " + num);
 //         } else{
-//             return("Your number is odd: " + num)};
+//             console.log("Your number is odd: " + num)};
+//
 //     }
 // }
 

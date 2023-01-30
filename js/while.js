@@ -39,22 +39,22 @@
 //Before loop, write some code to generate a rand number 50 - 100 which = cones to sell. During loop, generate a second rand number 1- 5 = amount of cones purchase. Using a do-while loop, log amount of cones being sold to each person. Do all of this until you run out of cones.
 
 //assign # of cones to sell
-var conesToSell = Math.floor(Math.random() * 50) + 50;
-//check how many cones
-console.log("There are " + conesToSell + "cones to sell!");
-    do{
-        //assign # of cones bought
-    var conesBought = Math.floor(Math.random() * 5) + 1;
-    //check if bought is too much
-        while(conesToSell < conesBought){
-            console.log("Sorry homey, can't sell you " + conesToSell + " cones.");
-            conesBought = Math.floor(Math.random() * 5) + 1;
-    }
-    //reasighn sell
-    conesToSell -= conesBought;
-    //# of cones left
-    console.log(conesBought + " cones sold!");
-    //check how many cones are left
-    console.log("There are " + conesToSell + " cones left.");
-    } while(conesToSell > 0);
+// var conesToSell = Math.floor(Math.random() * 50) + 50;
+// //check how many cones
+// console.log("There are " + conesToSell + "cones to sell!");
+//     do{
+//         //assign # of cones bought
+//     var conesBought = Math.floor(Math.random() * 5) + 1;
+//     //check if bought is too much
+//         while(conesToSell < conesBought){
+//             console.log("Sorry homey, can't sell you " + conesToSell + " cones.");
+//             conesBought = Math.floor(Math.random() * 5) + 1;
+//     }
+//     //reasighn sell
+//     conesToSell -= conesBought;
+//     //# of cones left
+//     console.log(conesBought + " cones sold!");
+//     //check how many cones are left
+//     console.log("There are " + conesToSell + " cones left.");
+//     } while(conesToSell > 0);
 
