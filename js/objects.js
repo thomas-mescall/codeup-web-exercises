@@ -73,13 +73,13 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-var books = [
-        {title: "Water", author: {firstname: "H2", lastname: "O"}},
-        {title: "Cat and the Hat", author: {firstname: "Dr.", lastname: "Suess"}},
-        {title: "Sandwitch", author: {firstname: "Peanut Butter", lastname: "Jelly"}},
-        {title: "Drinks", author: {firstname: "Chocolate", lastname: "Milk"}},
-        {title: "ISP", author: {firstname: "AT&T", lastname: "Verizon"}},
-]
+    // var books = [
+    //     {title: "Water", author: {firstname: "H2", lastname: "O"}},
+    //     {title: "Cat and the Hat", author: {firstname: "Dr.", lastname: "Suess"}},
+    //     {title: "Sandwitch", author: {firstname: "Peanut Butter", lastname: "Jelly"}},
+    //     {title: "Drinks", author: {firstname: "Chocolate", lastname: "Milk"}},
+    //     {title: "ISP", author: {firstname: "AT&T", lastname: "Verizon"}},
+    // ]
 
              /**
      * TODO:
@@ -105,12 +105,12 @@ var books = [
      *      ---
      *      ...
      */
-for(var i = 0; i < books.length; i++) {
-        var read = books[i];
-    console.log("Book #" + (i + 1));
-    console.log("Title: " + read.title);
-    console.log("Author: " + read.author.firstname + " " + read.author.lastname);
-    }
+// for(var i = 0; i < books.length; i++) {
+//         var read = books[i];
+//     console.log("Book #" + (i + 1));
+//     console.log("Title: " + read.title);
+//     console.log("Author: " + read.author.firstname + " " + read.author.lastname);
+//     }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -121,5 +121,24 @@ for(var i = 0; i < books.length; i++) {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    // while(true) {
+    //     var bookIn = prompt("Please enter your book name");
+    //     var title = bookIn;
+    //     var authorIn = prompt("Please enter your author name");
+    //     var author = authorIn;
+    // }
+
 
 })();
+
+function createBook(titleIn, authorIn) {
+    title = titleIn;
+    author = authorIn;
+    var books = [
+        {title: title, author: author}
+    ];
+    function showBookInfo(createBook) {
+        console.log("Title: " + books.title);
+        console.log("Author: " + books.author);
+    }
+}
