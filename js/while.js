@@ -46,15 +46,15 @@
 //         //assign # of cones bought
 //     var conesBought = Math.floor(Math.random() * 5) + 1;
 //     //check if bought is too much
-//         while(conesToSell < conesBought){
-//             console.log("Sorry homey, can't sell you " + conesToSell + " cones.");
-//             conesBought = Math.floor(Math.random() * 5) + 1;
-//     }
+//             while (conesToSell < conesBought) {
+//                 console.log("Sorry homey, can't sell you " + conesToSell + " cones.");
+//                 conesBought = Math.floor(Math.random() * 5) + 1;
+//             }
 //     //reasighn sell
 //     conesToSell -= conesBought;
 //     //# of cones left
 //     console.log(conesBought + " cones sold!");
 //     //check how many cones are left
 //     console.log("There are " + conesToSell + " cones left.");
-//     } while(conesToSell > 0);
+//     } while(conesToSell > 0)
 
