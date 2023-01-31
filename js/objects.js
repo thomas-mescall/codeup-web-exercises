@@ -131,14 +131,55 @@
 
 })();
 
-function createBook(titleIn, authorIn) {
-    title = titleIn;
-    author = authorIn;
-    var books = [
-        {title: title, author: author}
-    ];
-    function showBookInfo() {
-        console.log("Title: " + books.title);
-        console.log("Author: " + books.author);
+function createBook(titleIn, authorName) {
+    return {title: titleIn, author: authorName};
     }
-}
+    var newBooks = [
+    createBook("Seatbelt Safety", "Waul Palker"),
+    createBook("Family", "Vinn Diesel"),
+    createBook("Let's go for a walk", "My Dog")
+    ];
+
+console.log(newBooks);
+
+
+function showBookInfo(x) {
+        console.log("Title: " + newBooks[x].title);
+        console.log("Author: " + newBooks[x].author);
+    }
+
+
+
+//****courtesy of Austin****
+// function createBook (title, first, last) {
+//     return {
+//         title: title,
+//         author: {
+//             firstName: first,
+//             lastName: last
+//         }
+//     }
+// }
+// var newBooks = [
+//
+//     createBook("The Art of Loyalty", "Benedict", "Arnold"),
+//     createBook("Common Cents", "Thomas", "Lincoln"),
+//     createBook("The Little Giant", "Peter", "Dinklage"),
+//     createBook("Bonds of Family", "Jaime", "Lannister"),
+//     createBook("Don't Lose Your Head", "Ned", "Stark")
+// ];
+//
+// console.log(newBooks);
+//
+// // bonus question 2 below
+// function showBookInfo(x) {
+//     console.log("Book #" + (newBooks.indexOf(newBooks[x]) + 1) + "\n" +
+//         "Title: " + newBooks[x].title + "\n" +
+//         "Author: " + newBooks[x].author.firstName + " " + newBooks[x].author.lastName + "\n---");
+//
+// }
+// showBookInfo(3);
+//
+// newBooks.forEach(function(showBook) {
+//     console.log(showBook);
+// });
