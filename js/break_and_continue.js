@@ -24,5 +24,6 @@
 //         alert("Yo that number is NOT odd")
 //     }
 // } while(true);
+console.log("hello")
 
 
