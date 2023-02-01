@@ -7,6 +7,10 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="but1">Number 1</button>
+<button id="but2">Number 2</button>
+<button id="but3">Number 3</button>
+<button id="but4">Number 4</button>
 <ul>
   <li data-dbid="1">Item 1</li>
   <li data-dbid="2">Item 2</li>
@@ -32,21 +36,59 @@
     var mainHeader = document.getElementById('main-header');
     console.log(mainHeader);
     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-    mainHeader.innerHTML = "JavaScript is Cool";
+    //creating listener function that holds no parameters and is activated by clicking button 1. Function will change main-header and send alert
+    let listener1 = function () {
+      mainHeader.innerHTML = "JavaScript is Cool";
+      alert("You just changed the title.");
+    };
+    //storing but1 ID into variable
+    let but1 = document.getElementById('but1');
+    //running but1 event
+    but1.addEventListener('click', listener1);
+
+
     // TODO: Uncomment the next line and get the sub header element by id
     var subHeader = document.getElementById('sub-header');
-
     // TODO: Set the text color of subHeader to blue
-    subHeader.style.color = "blue";
+    //creating listener function that holds no parameters and is activated by clicking button 2. Function will change sub-header color to blue and send alert.
+    let listener2 = function () {
+      subHeader.style.color = "blue";
+      alert("You just changed the color of sub-header.")
+    }
+    //storing but2 ID into variable
+    let but2 = document.getElementById('but2');
+    //running but2 event
+    but2.addEventListener('click', listener2);
+
+
     // TODO: Uncomment the next line and get all list items
      var listItems = document.getElementsByTagName('li');
-
     // TODO: Set text color on every other list item to grey
-    for(var i = 0; i < listItems.length; i+= 2) {
-      listItems[i].style.color = "grey";
+    //creating listener function that holds no parameters and is activated by clicking button 3. Function will change odd # items to grey and send alert.
+    let listener3 = function () {
+      for (var i = 0; i < listItems.length; i += 2) {
+        listItems[i].style.color = "grey";
+      }
+      alert("You just changed the color of odd numbered items.")
     }
+    //storing but3 into variable
+    let but3 = document.getElementById('but3');
+    //running but3 event
+    but3.addEventListener('click',listener3);
+
+
     // TODO: Set text color of li with dbid = 1 to blue
-    listItems[0].style.color = "blue";
+    //creating listener function that holds no parameters and is activated by clicking button 4. Function will change item 1 to blue and send alert.
+    let listener4 = function () {
+      listItems[0].style.color = "blue";
+      alert("You just change the color of item 1.")
+    }
+    //storing but4 ID into variable
+    let but4 = document.getElementById('but4');
+    //running but4 event
+    but4.addEventListener('click', listener4);
+
+
     // TODO: Uncomment the next line and get all elements with class name sub-paragraph
      var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
