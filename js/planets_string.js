@@ -22,10 +22,22 @@
     planets.unshift("The Sun");
     console.log(planets);
 
+    console.log("Printing the index of 'The Sun'");
+    var theSun = planets.indexOf("The Sun");
+    console.log(theSun);
+
 
     console.log('Adding "Pluto" to the end of the planets array.');
     planets.push("Pluto");
     console.log(planets);
+
+    console.log("Printing the last index of 'Pluto'");
+    var pluto = planets.lastIndexOf("Pluto");
+    console.log(pluto);
+
+    console.log("Printing new array containing 'Uranus' and 'Neptune' using slice");
+    var outCasts = planets.slice(7,9);
+    console.log(outCasts);
 
     console.log('Removing "The Sun" from the beginning of the planets array.');
     planets.shift();
@@ -46,4 +58,13 @@
     console.log("Sorting the planets array.");
     planets.sort();
     console.log(planets);
+
+    console.log("Printing new array of countries using split method");
+    var counTrees = "America, Iran, Iraq, Afgahnistan, Canada, Mexico, Brazil, Nigeria, Vietnam";
+    var countreesArr = counTrees.split();
+    console.log(countreesArr);
+
+    console.log("Converting countries array into a string");
+    var countrieString = countreesArr.join();
+    console.log(countrieString);
 })();

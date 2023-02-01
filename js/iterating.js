@@ -12,7 +12,7 @@ var names = ["Tom", "Tommy", "Thomas", "Tomas"];
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    console.log(names);
+    console.log(names.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -22,7 +22,7 @@ var names = ["Tom", "Tommy", "Thomas", "Tomas"];
     console.log(names[1]);
     console.log(names[2]);
     console.log(names[3]);
-    console.log("                       ")
+    console.log("                       ");
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
