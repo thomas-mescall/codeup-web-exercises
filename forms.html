@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+  <body>
+  <form method="POST" action="https://request-inspector.glitch.me/">
+
+  <input type="text" name="username" placeholder="Enter your username...">
+  <input type="password" name="password" placeholder="Enter your password...">
+
+    <div>
+    <textarea name="bio">Bio</textarea>
+    </div>
+  <p>How did you hear about us?</p>
+    <div>
+        <input type="checkbox" name="marketing_questions" value="billboard"> Billboard<br>
+        <input type="checkbox" name="marketing_questions" value="radio advertisement">Radio Advertisement<br>
+        <input type="checkbox" name="marketing_questions" value="internet advertisement">Internet Advertisement<br>
+        <input type="checkbox" name="marketing_questions" value="other">Other<br>
+    </div>
+  <p>What web browser are you using?</p>
+    <select id="mySelect">
+        <option value="firefox">Firefox</option>
+        <option value="google_chrome">Google Chrome</option>
+        <option value="netgear">Netgear</option>
+        <option value="internet_explorer">Internet Explorer</option>
+    </select>
+    <script>
+        var bowser = document.getElementById("mySelect");
+        bowser.addEventListener("change",function (){
+            alert("NOICE");
+        });
+    </script>
+      <h4><em>Don't forget to submit!</em></h4>
+      <div>
+      <button type="submit"><b>Submit Form</b></button>
+      </div>
+  </form>
+  </body>
+
+</html>
