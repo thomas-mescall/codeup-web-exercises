@@ -148,32 +148,27 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    // while(true) {
-    //     var bookIn = prompt("Please enter your book name");
-    //     var title = bookIn;
-    //     var authorIn = prompt("Please enter your author name");
-    //     var author = authorIn;
-    // }
+
 
 
 })();
 
-function createBook(titleIn, authorName) {
-    return {title: titleIn, author: authorName};
-    }
-    var newBooks = [
-    createBook("Seatbelt Safety", "Waul Palker"),
-    createBook("Family", "Vinn Diesel"),
-    createBook("Let's go for a walk", "My Dog")
-    ];
-
-console.log(newBooks);
-
-
-function showBookInfo(x) {
-        console.log("Title: " + newBooks[x].title);
-        console.log("Author: " + newBooks[x].author);
-    }
+// function createBook(titleIn, authorName) {
+//     return {title: titleIn, author: authorName};
+//     }
+//     var newBooks = [
+//     createBook("Seatbelt Safety", "Waul Palker"),
+//     createBook("Family", "Vinn Diesel"),
+//     createBook("Let's go for a walk", "My Dog")
+//     ];
+//
+// console.log(newBooks);
+//
+//
+// function showBookInfo(x) {
+//         console.log("Title: " + newBooks[x].title);
+//         console.log("Author: " + newBooks[x].author);
+//     }
 
 
 
@@ -210,3 +205,8 @@ function showBookInfo(x) {
 // newBooks.forEach(function(showBook) {
 //     console.log(showBook);
 // });
+var truckObject = {}
+truckObject.make = "Toyota";
+truckObject.model = "Tundra";
+truckObject.owner = {firstName: "Thomas", lastName: "Mescall"};
+truckObject.features = ["Limited Edition", "JBL Sound System", "Nav System", "4x4"];
