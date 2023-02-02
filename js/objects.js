@@ -43,7 +43,7 @@
      * and console.log the relevant messages for each person
      */
 
-thomas-mescall
+    //thomas-mescall
     // var shoppers = [
     //     {name: 'Cameron', amount: 180},
     //     {name: 'Ryan', amount: 250},
@@ -68,7 +68,7 @@ thomas-mescall
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    console.log(shoppers.name);
+    //console.log(shoppers.name);
     // function shopDis() {
     //     while (shoppers) {
     //         if (shoppers.amount > 200) {
@@ -87,7 +87,7 @@ thomas-mescall
 //     } else {continue};
 //     console.log(shoppers.name + " you have recieved a discount of " + amount + "off your original price of " + shoppers.amount);
 // }
- main
+// main
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -137,7 +137,7 @@ thomas-mescall
 //     console.log("Book #" + (i + 1));
 //     console.log("Title: " + read.title);
 //     console.log("Author: " + read.author.firstname + " " + read.author.lastname);
-//     }
+//      }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
