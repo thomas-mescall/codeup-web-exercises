@@ -20,7 +20,14 @@ h3 {
 
 body {
     background-color: aliceblue;
-    background-image: url("");
+    /*Why does '/..' need to be included before /img?*/
 }
+
+
+body {
+    background-image: url("/../img/goose.jpeg");
+    background-size: contain;
+}
+
 
 
