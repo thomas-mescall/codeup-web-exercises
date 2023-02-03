@@ -143,20 +143,20 @@
      */
 
     //*****courtesy of Trevor*********
-    function createBook(title, first, last) {
-        return {
-            title: title,
-            author: {
-                firstName: first,
-                lastName: last
-            }
-        }
-    }
-    var userTitle = prompt("enter title");
-    var userFirst = prompt("enter author first name");
-    var userLast = prompt("enter author last name");
-
-    console.log(createBook(userTitle, userFirst, userLast));
+    // function createBook(title, first, last) {
+    //     return {
+    //         title: title,
+    //         author: {
+    //             firstName: first,
+    //             lastName: last
+    //         }
+    //     }
+    // }
+    // var userTitle = prompt("enter title");
+    // var userFirst = prompt("enter author first name");
+    // var userLast = prompt("enter author last name");
+    //
+    // console.log(createBook(userTitle, userFirst, userLast));
     //*****courtesy of Trevor*********
 
 
