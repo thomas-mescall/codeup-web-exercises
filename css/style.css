@@ -8,3 +8,19 @@ comment
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+#top {
+    text-align: center;
+}
+
+h3 {
+    color: slategrey;
+    text-decoration: underline;
+}
+
+body {
+    background-color: aliceblue;
+    background-image: url("");
+}
+
+
