@@ -44,11 +44,11 @@
      */
 
     //thomas-mescall
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
     // var discount = 0.12;
     // for(var i = 0; i < shoppers.length; i++) {
     //     var shopper = shoppers[i];
@@ -61,33 +61,20 @@
     //     }
     // }
 
-
-
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-    //console.log(shoppers.name);
-    // function shopDis() {
-    //     while (shoppers) {
-    //         if (shoppers.amount > 200) {
-    //             var discount = (12/100);
-    //             discount = discount * shoppers.amount;
-    //             console.log(shoppers.name " your discount is " + discount + " off your order of " + shoppers.amount);
-    //         } else if (shoppers.amount < 200) {
-    //             console.log(shoppers.name
-    //             " your discount is " + discount + " off your order of " + shoppers.amount);
+    ////******courtesy of Trevor*******
+    // function discountProgram(shoppers) {
+    //     shoppers.forEach(function (shopper){
+    //         console.log("The shopper: " + shopper.name + " has spent $" + shopper.amount + "!")
+    //         if(shopper.amount >= 200) {
+    //             console.log(shopper.name + " got a discount of " + (shopper.amount * 0.12) + " and the total amount comes out to be $" + (shopper.amount * .88).toFixed(2) + "!");
+    //         } else {
+    //             console.log(shopper.name + " didn't spend over $200 and didn't get the discount.")
     //         }
-    //     }
+    //     })
     // }
-// function discount() {
-//     if(amount > 200) {
-//         amount *= .12;
-//     } else {continue};
-//     console.log(shoppers.name + " you have recieved a discount of " + amount + "off your original price of " + shoppers.amount);
-// }
-// main
+    // discountProgram(shoppers);
+    ////******courtesy of Trevor*******
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -100,15 +87,21 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-    // var books = [
-    //     {title: "Water", author: {firstname: "H2", lastname: "O"}},
-    //     {title: "Cat and the Hat", author: {firstname: "Dr.", lastname: "Suess"}},
-    //     {title: "Sandwitch", author: {firstname: "Peanut Butter", lastname: "Jelly"}},
-    //     {title: "Drinks", author: {firstname: "Chocolate", lastname: "Milk"}},
-    //     {title: "ISP", author: {firstname: "AT&T", lastname: "Verizon"}},
-    // ]
+    var books = [
+        {title: "Water", author: {firstname: "H2", lastname: "O"}},
+        {title: "Cat and the Hat", author: {firstname: "Dr.", lastname: "Suess"}},
+        {title: "Sandwitch", author: {firstname: "Peanut Butter", lastname: "Jelly"}},
+        {title: "Drinks", author: {firstname: "Chocolate", lastname: "Milk"}},
+        {title: "ISP", author: {firstname: "AT&T", lastname: "Verizon"}},
+    ]
+    console.log(books);
+    books.forEach(function (books,index){
+        console.log("Book # " + index);
+        console.log("Title: " + books.title);
+        console.log("Author: " + books.author.firstname + " " + books.author.lastname);
+    })
 
-             /**
+    /**
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
@@ -148,6 +141,24 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    //*****courtesy of Trevor*********
+    function createBook(title, first, last) {
+        return {
+            title: title,
+            author: {
+                firstName: first,
+                lastName: last
+            }
+        }
+    }
+    var userTitle = prompt("enter title");
+    var userFirst = prompt("enter author first name");
+    var userLast = prompt("enter author last name");
+
+    console.log(createBook(userTitle, userFirst, userLast));
+    //*****courtesy of Trevor*********
+
 
 
 
