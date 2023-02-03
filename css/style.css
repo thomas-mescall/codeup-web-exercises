@@ -14,7 +14,8 @@ comment
 }
 
 h3 {
-    color: slategrey;
+    color: black;
+    text-decoration-style: dotted;
     text-decoration: underline;
 }
 
@@ -25,9 +26,41 @@ body {
 
 
 body {
-    background-image: url("/../img/mountain_1.jpeg");
+    background-image: url("/../img/clouds.jpeg");
     background-size: cover;
 }
+
+ul {list-style: square}
+
+body {
+    font-family: -apple-system;
+}
+
+th, td {
+    padding: 10px;
+    font-size: x-large ;
+}
+
+a:link{
+    color: red;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: blue;
+}
+a:active{
+    color: green;
+}
+
+img {
+    height: 10%;
+    width: 10%;
+}
+
+
+
 
 
 
