@@ -94,16 +94,22 @@ a {
 .profile-details {
     float: inherit;
     width: 25%;
+    margin: 0.5em;
+    width: calc(100% - 2em);
 }
 /*new class added*/
 .timeline {
     float: inherit;
     width: 50%;
+    margin: 0.5em;
+    width: calc(100% - 2em);
 
 }
 /*new class added*/
 .who-to-follow {
     float: inherit;
     width: 25%;
+    margin: 0.5em;
+    width: calc(100% - 2em);
 
 }
