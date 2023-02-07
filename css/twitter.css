@@ -28,7 +28,8 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
-    padding: 1.5em;
+    /*padding: 1.5em;*/
+    position: fixed;
     width: 100%;
 }
 .nav {
@@ -38,13 +39,16 @@ a {
 }
 /*new class added*/
 .nav-item {
-    float: left;
-    margin: 6px;
+    /*float: left;*/
+    /*margin: 6px;*/
+    padding: 1.5em;
+    display: inline-block;
 }
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
+    display: inline-block;
 }
 .nav-link:hover {
     color: var(--link-color);
@@ -61,10 +65,12 @@ a {
     font-weight: bold;
     padding: 8px;
     border-radius: 5px;
+
 }
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+
 }
 .img-circle {
     border-radius: 100%;
@@ -74,6 +80,7 @@ a {
 }
 .text-right {
     text-align: right;
+
 }
 .text-muted {
     color: var(--main-link-color);
@@ -89,27 +96,33 @@ a {
     float: right;
     /*matching the height of .profile*/
     line-height: 80px;
+
 }
 /*new class added*/
 .profile-details {
-    float: inherit;
+    float: right;
     width: 25%;
     margin: 0.5em;
-    width: calc(100% - 2em);
+    width: calc(25% - .5em);
 }
 /*new class added*/
 .timeline {
-    float: inherit;
+    float: right;
     width: 50%;
     margin: 0.5em;
-    width: calc(100% - 2em);
+    width: calc(50% - .5em);
 
 }
 /*new class added*/
 .who-to-follow {
-    float: inherit;
+    float: right;
     width: 25%;
     margin: 0.5em;
-    width: calc(100% - 2em);
+    width: calc(25% - .5em);
 
+}
+/*new class added*/
+.container {
+    top: 2em;
+    bottom: 2em;
 }
