@@ -31,6 +31,7 @@ a {
     /*padding: 1.5em;*/
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .nav {
     list-style-type: none;
@@ -88,7 +89,7 @@ a {
 /*new class added*/
 .profile-image {
     position: absolute;
-    top: 250px;
+    top: 235px;
 }
 /*new class added*/
 .profile-form {
@@ -100,29 +101,33 @@ a {
 }
 /*new class added*/
 .profile-details {
-    float: right;
+    float: left;
     width: 25%;
-    margin: 0.5em;
+    margin: .5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     width: calc(25% - .5em);
+
 }
 /*new class added*/
 .timeline {
     float: right;
     width: 50%;
     margin: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     width: calc(50% - .5em);
 
 }
 /*new class added*/
 .who-to-follow {
-    float: right;
+    float: left;
     width: 25%;
     margin: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     width: calc(25% - .5em);
 
 }
-/*new class added*/
-.container {
-    top: 2em;
-    bottom: 2em;
-}
+
+
