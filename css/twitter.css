@@ -38,7 +38,7 @@ a {
     padding: 0;
     margin: 0;
 }
-/*new class added*/
+/*new selector added*/
 .nav-item {
     /*float: left;*/
     /*margin: 6px;*/
@@ -86,12 +86,12 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
-/*new class added*/
+/*new selector added*/
 .profile-image {
     position: absolute;
     top: 235px;
 }
-/*new class added*/
+/*new selector added*/
 .profile-form {
     /*floating edit profile button*/
     float: right;
@@ -99,7 +99,7 @@ a {
     line-height: 80px;
 
 }
-/*new class added*/
+/*new selector added*/
 .profile-details {
     float: left;
     width: 25%;
@@ -109,7 +109,7 @@ a {
     width: calc(25% - .5em);
 
 }
-/*new class added*/
+/*new selector added*/
 .timeline {
     float: right;
     width: 50%;
@@ -119,7 +119,7 @@ a {
     width: calc(50% - .5em);
 
 }
-/*new class added*/
+/*new selector added*/
 .who-to-follow {
     float: left;
     width: 25%;
@@ -127,7 +127,39 @@ a {
     margin-top: 0em;
     margin-bottom: 0em;
     width: calc(25% - .5em);
-
+}
+/*new selector added*/
+.container {
+    margin: 2em;
+}
+/*new selector added*/
+.media {
+    width: 100%;
+    background-color: lightcyan;
+    border-bottom: 1px;
+    --separator-color: #DDD;
+    padding: .5em;
+    overflow: inherit;
+}
+/*new selector added*/
+.media-image {
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: inherit;
+}
+/*new selector added*/
+.media-body {
+    float: inherit;
+    width: 100%;
+    width: calc(100% - .5em);
+}
+/*new selector added*/
+.profile-items {
+    padding: 0;
+}
+/*new selector added*/
+.profile-entry {
+    margin: .5em;
 }
 
 
