@@ -110,9 +110,7 @@ section:nth-of-type(3) h3 {
     width: 5em;
     background: brown;
     /* enter needed declarations here */
-    display: flex;
-
-    align-content: space-evenly ;
+    flex-basis: 50%;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -121,6 +119,7 @@ section:nth-of-type(3) h3 {
 
 section:nth-of-type(5) {
     /* enter needed declarations here */
+    justify-content: space-evenly;
 }
 
 .yellow-box {
@@ -133,6 +132,9 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     /* enter needed declarations here */
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .grey-box {
