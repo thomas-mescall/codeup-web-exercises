@@ -18,23 +18,25 @@
     padding: .2em 0 .2em 0;
 }
 
-.optionOne{
-
-    flex-direction: row;
-}
 
 a {
-
     color: black;
+    font-weight: bold;
     display: inline-block;
-
 }
 
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
 }
 
 a:hover {
