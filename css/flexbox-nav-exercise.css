@@ -2,7 +2,7 @@
     box-sizing: border-box;
     border: solid black 1px;
     background-color: darkgrey;
-    padding: 1em;
+    /*padding: 1em;*/
     margin: auto;
 }
 
@@ -32,6 +32,9 @@ a {
 
 ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 a:hover {
