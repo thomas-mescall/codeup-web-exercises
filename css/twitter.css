@@ -31,7 +31,7 @@ a {
     /*padding: 1.5em;*/
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
@@ -49,7 +49,7 @@ a {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .nav-link:hover {
     color: var(--link-color);
@@ -101,61 +101,65 @@ a {
 }
 /*new selector added*/
 .profile-details {
+    /*clear: left;*/
     float: left;
-    width: 25%;
-    margin: .5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    margin: 0 .5em 0 .5em;
+    /*width: 25%;*/
     width: calc(25% - .5em);
-
-}
-/*new selector added*/
-.timeline {
-    float: right;
-    width: 50%;
-    margin: 0.5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    width: calc(50% - .5em);
 
 }
 /*new selector added*/
 .who-to-follow {
-    float: left;
-    width: 25%;
-    margin: 0.5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    clear: right;
+    float: right;
+    margin: 0 .5em 0 .5em;
+    /*width: 25%;*/
     width: calc(25% - .5em);
 }
 /*new selector added*/
+.timeline {
+    clear: right;
+    float: left;
+    margin: 0 .5em 0 .5em;
+    /*width: 50%;*/
+    width: calc(50% - .5em);
+
+}
+
+/*new selector added*/
 .container {
     margin: 2em;
+
 }
 /*new selector added*/
 .media {
     width: 100%;
-    background-color: lightcyan;
+    background-color: var(--light-bg);
     border-bottom: 1px;
     --separator-color: #DDD;
     padding: .5em;
-    overflow: inherit;
+
+
 }
 /*new selector added*/
 .media-image {
     max-width: 50px;
     margin-top: 1.33em;
-    float: inherit;
+    float: left;
+
 }
 /*new selector added*/
 .media-body {
+    /*clear: both;*/
     float: inherit;
-    width: 100%;
+    /*width: 100%;*/
     width: calc(100% - .5em);
+
 }
 /*new selector added*/
 .profile-items {
     padding: 0;
+    list-style-type: none;
 }
 /*new selector added*/
 .profile-entry {
