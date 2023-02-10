@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox Nav Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   <link rel="stylesheet" href="css/flexbox-nav-exercise.css">
 
 </head>
   <body>
-
-  <div class="topnav">
-      <a class="articles" href="#">Articles</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-  </div>
-
+<!--  creating box to put nav bar in-->
+    <div class="myBox">
+<!--  Creating meat and potatoes of nav bar-->
+        <p>
+          <div class="topNav">
+<!--        creating left side of nav bar-->
+                <div class="optionOne">
+                    <ul>
+                      <li><a class="articles" id="one" href="#">Articles</a></li>
+                      <li><a class="products" id="two" href="#">Products</a></li>
+                      <li><a class="market" id="three" href="#">Market</a></li>
+                      <li><a class="jobs" id="four" href="#">Jobs</a></li>
+                    </ul>
+                </div>
+<!--        insert logo here-->
+            <a class="title" id="five" href="#">Logo</a>
+<!--        creating right side of nav bar-->
+                <div class="optionTwo">
+                    <ul>
+                      <li><a class="follow" id="six" href="#">Follow Us</a></li>
+                      <li><a><i class="fas fa-search"></i></a></li>
+                      <li><a><i class="fas fa-cart-plus"></i></a></li>
+                      <li><a><i class="fas fa-user-astronaut"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </p>
+    </div>
   </body>
 </html>
