@@ -43,7 +43,7 @@
 
 a {
     color: black;
-    font-weight: bold;
+    /*font-weight: bold;*/
     display: inline-block;
     text-decoration: none;
     margin: 12px;
