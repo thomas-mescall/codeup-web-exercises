@@ -7,15 +7,15 @@
 }
 
 .topNav {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .optionOne.optionTwo.optionThree {
     display: flex;
-
 }
 
 .optionOne>ul {
@@ -35,15 +35,19 @@
 }
 
 
+
 a {
     color: black;
     font-weight: bold;
     display: inline-block;
     text-decoration: none;
+    margin: 12px;
 }
 
 ul {
     list-style: none;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 a:hover {
