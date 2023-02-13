@@ -1,0 +1,17 @@
+.container-fluid{
+    /*display: block;*/
+
+}
+
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+    height: 346px;
+    /*display: flex;*/
+}
+
+.welcome {
+    /*margin: auto;*/
+    padding: 0px 377px 0px 377px;
+    background-color: white;
+}
