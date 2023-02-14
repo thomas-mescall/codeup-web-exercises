@@ -58,24 +58,25 @@
 
     <h2>Build your own pizza!</h2>
 <!--importing buttons for selecting ingredients-->
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-light">
         Size and Crust <span class="badge bg-secondary">4</span>
     </button>
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-light">
         Cheese and Sauce <span class="badge bg-secondary">4</span>
     </button>
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-light">
         Toppings <span class="badge bg-secondary">4</span>
     </button>
 
 <!--    inserting card-->
+    <h3 class="card-title bg-primary text-white">Choose Size and Crust</h3>
     <div class="card" style="width: auto;">
         <div class="card-body">
-            <h3 class="card-title bg-primary text-white">Choose Size and Crust</h3>
             <div class="card" style="width: auto;">
 <!--                <img src="..." class="card-img-top" alt="...">-->
-                <div class="card-body">
-                    <h5 class="card-title-two bg-light">Hand Tossed</h5>
+                <div class="card-header">
+                    Hand Tossed
+                </div>
                     <ul class="list-group">
                         <li class="list-group-item">
                             Garlic seasoned crust with a rich, buttery taste.
@@ -92,36 +93,35 @@
                             <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
                             Large (14")
                         </li>
-
-                </div>
-            </div>
-            <div class="card" style="width: auto;">
-<!--                <img src="..." class="card-img-top" alt="...">-->
-                <div class="card-body">
-                    <h5 class="card-title-two bg-light">Crispy Thin</h5>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            Thin enough for optimum crispy to crunchy ratio.
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            Small (10")
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            Medium (12")
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                            Large (14")
-                        </li>
-
                     </ul>
+            </div>
+        </div>
+<!--            <div class="card" style="width: auto;">-->
+                <div class="card-header">
+                    Crispy Thin
 
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Thin enough for optimum crispy to crunchy ratio.
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Small (10")
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Medium (12")
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                Large (14")
+                            </li>
+                        </ul>
                 </div>
             </div>
         </div>
-        <div class="bg-light text-right">
+<!--        pushing bottom button to the far right-->
+        <div class="bg-light d-grid gap-2 d-md-flex justify-content-md-end">
             <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
         </div>
     </div>
