@@ -64,25 +64,29 @@
     <!--//////////////////////////////////////////////////////////////////-->
     <h2>Build your own pizza!</h2>
 <!--importing buttons for selecting ingredients: Size and Crust, Cheese and Sauce, Toppings-->
-    <button type="button" class="btn btn-light" id="butOne">
-        Size and Crust <span class="badge bg-secondary" id="bgOne">0</span>
-    </button>
-    <button type="button" class="btn btn-light" id="butTwo">
-        Cheese and Sauce <span class="badge bg-secondary">4</span>
-    </button>
-    <button type="button" class="btn btn-light" id="butThree">
-        Toppings <span class="badge bg-secondary">4</span>
-    </button>
+    <div class="btn-group">
+        <button type="button" class="btn btn-light"                             data-toggle="accordion" data-target="#mainCardOne">
+                Size and Crust <span class="badge bg-secondary" id="bgOne">0</span>
+        </button>
+        <button type="button" class="btn btn-light" id="butTwo">
+                Cheese and Sauce <span class="badge bg-secondary">4</span>
+        </button>
+        <button type="button" class="btn btn-light" id="butThree">
+                Toppings <span class="badge bg-secondary">4</span>
+        </button>
+    </div>
 <!--//////////////////////////////////////////////////////////////////-->
 <!--    inserting card-->
-    <h3 class="card-header bg-primary text-white">Choose Size and Crust</h3>
-    <label for="butOne" class="form-control" id="labelOne">
-    <div class="card" id="mainCardOne" >
+    <h3 class="card-header bg-primary text-white">
+        Choose Size and Crust
+    </h3>
+<!--    <div class="open" id="labelOne">-->
+    <div class="card accordion-item" id="mainCardOne" >
         <div class="card-body">
             <div class="card" style="width: auto">
                 <div class="card-header" id="cardTopOne">
                     Hand Tossed
-                </div>
+
                     <ul class="list-group">
                         <li class="list-group-item">
                             Garlic seasoned crust with a rich, buttery taste.
@@ -100,6 +104,7 @@
                             Large (14")
                         </li>
                     </ul>
+                </div>
             </div>
 
 <!--card for crispy thin -->
@@ -139,7 +144,7 @@
             <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
         </div>
     </div>
-    </label>
+<!--    </div>-->
 <!--//////////////////////////////////////////////////////////////////-->
 
 
