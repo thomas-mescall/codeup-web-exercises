@@ -49,15 +49,17 @@
 </nav>
 
 <!--container for everything underneath nav bar-->
-<div class="container-fluid">
+<div class="container-fluid d-block">
+<!--    banner: 'Welcome to Pizza World!'-->
     <div class="jumbotron d-sm-none d-md-block">
-        <div class="welcome opacity-50">
+<!--        FIXME: need to center the banner-->
+        <div class="welcome bg-white opacity-50 d-flex justify-content-center align-self-center">
             Welcome to Pizza World!
         </div>
     </div>
 
     <h2>Build your own pizza!</h2>
-<!--importing buttons for selecting ingredients-->
+<!--importing buttons for selecting ingredients: Size and Crust, Cheese and Sauce, Toppings-->
     <button type="button" class="btn btn-light">
         Size and Crust <span class="badge bg-secondary">4</span>
     </button>
@@ -70,10 +72,9 @@
 
 <!--    inserting card-->
     <h3 class="card-title bg-primary text-white">Choose Size and Crust</h3>
-    <div class="card" style="width: auto;">
+    <div class="card" >
         <div class="card-body">
             <div class="card" style="width: auto;">
-<!--                <img src="..." class="card-img-top" alt="...">-->
                 <div class="card-header">
                     Hand Tossed
                 </div>
@@ -96,7 +97,7 @@
                     </ul>
             </div>
         </div>
-<!--            <div class="card" style="width: auto;">-->
+
                 <div class="card-header">
                     Crispy Thin
 
