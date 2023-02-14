@@ -65,7 +65,7 @@
     <h2>Build your own pizza!</h2>
 <!--importing buttons for selecting ingredients: Size and Crust, Cheese and Sauce, Toppings-->
     <div class="btn-group">
-        <button type="button" class="btn btn-light"                             data-toggle="accordion" data-target="#mainCardOne">
+        <button type="button" class="btn btn-light" id="butOne"                  data-toggle="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#cardOne">
                 Size and Crust <span class="badge bg-secondary" id="bgOne">0</span>
         </button>
         <button type="button" class="btn btn-light" id="butTwo">
@@ -81,9 +81,9 @@
         Choose Size and Crust
     </h3>
 <!--    <div class="open" id="labelOne">-->
-    <div class="card accordion-item" id="mainCardOne" >
-        <div class="card-body">
-            <div class="card" style="width: auto">
+<!--    <div class="card accordion-item" id="mainCardOne" >-->
+<!--        <div class="card-body">-->
+            <div class="card accordion open" id="cardOne">
                 <div class="card-header" id="cardTopOne">
                     Hand Tossed
 
@@ -105,7 +105,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+
 
 <!--card for crispy thin -->
                 <div class="card-header" id="cardTopTwo">
@@ -114,9 +114,6 @@
                             <li class="list-group-item">
                                 Thin enough for optimum crispy to crunchy ratio.
                             </li>
-
-<!--                            testing to connect menu items to badges-->
-
                             <li class="list-group-item">
                                 <div>
                                     <label for="bgOne" class="form-label">
@@ -124,9 +121,6 @@
                                 Small (10")</label>
                                 </div>
                             </li>
-
-                            <!--                            testing to connect menu items to badges-->
-
                             <li class="list-group-item">
                                 <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
                                 Medium (12")
@@ -137,14 +131,13 @@
                             </li>
                         </ul>
                 </div>
+                <!--        pushing bottom button to the far right-->
+                <div class="bg-light d-grid gap-2 d-md-flex                            justify-content-md-end">
+                    <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
+                </div>
             </div>
 
-        <!--        pushing bottom button to the far right-->
-        <div class="bg-light d-grid gap-2 d-md-flex                            justify-content-md-end">
-            <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
-        </div>
-    </div>
-<!--    </div>-->
+
 <!--//////////////////////////////////////////////////////////////////-->
 
 
