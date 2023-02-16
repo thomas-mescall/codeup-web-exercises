@@ -94,10 +94,13 @@
 <!--//////////////////////////////////////////////////////////////////-->
 
 <!--    inserting card-->
-
+<!--hand tossed-->
     <h3 class="card-header bg-primary text-white">
         Choose Size and Crust
     </h3>
+    <div class="mb-3">
+        <label for="cardOne" class="form-label"></label>
+
             <div class="card accordion open" id="cardOne">
                 <div class="card-header" id="cardTopOne-One">
                     Hand Tossed
@@ -148,13 +151,15 @@
                 </div>
                 <!--        pushing bottom button to the far right-->
                 <div class="bg-light d-grid gap-2 d-md-flex                            justify-content-md-end">
-                    <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
+                    <label for="cardTwo" class="btn btn-primary" style="width: 115px">Next Step ></label>
                 </div>
             </div>
+    </div>
 
 
 <!--//////////////////////////////////////////////////////////////////-->
-
+    <div class="mb-3">
+        <label for="cardTwo" class="form-label"></label>
     <div class="card accordion open" id="cardTwo">
 
 <!--        Card for Cheese selection-->
@@ -199,11 +204,11 @@
                         <li><a class="dropdown-item" href="#">Alfredo</a></li>
                     </ul>
                 </div>
-                <li class="list-group-item">
+                <li class="list-group-item ">
                     How Much?
                 </li>
                 <div class="dropdown bg-white ">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Amount
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -216,15 +221,19 @@
             </ul>
         </div>
         <!--        pushing bottom button to the far right-->
-        <div class="bg-light d-grid gap-2 d-md-flex                            justify-content-md-end">
-            <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
+        <div class="btn-group d-flex ms-auto" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary d-flex gap-2 justify-content-md-end">< Prev</button>
+            <button type="button" class="btn btn-primary d-flex gap-2 justify-content-md-end">Next ></button>
         </div>
+
+    </div>
     </div>
 
     <!--//////////////////////////////////////////////////////////////////-->
 
 <!--    card for meats-->
-
+    <div class="mb-3">
+        <label for="cardThree" class="form-label"></label>
     <div class="card accordion open" id="cardThree">
         <div class="card-header" id="cardTopThree-One">
             Choose Meats
@@ -276,8 +285,9 @@
         </div>
         <!--        pushing bottom button to the far right-->
         <div class="bg-light d-grid gap-2 d-md-flex                            justify-content-md-end">
-            <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
+            <a href="#" class="btn btn-primary" style="width: 115px">Checkout</a>
         </div>
+    </div>
     </div>
 
     <!--//////////////////////////////////////////////////////////////////-->
