@@ -1,50 +1,81 @@
 
-/** {*/
-/*    box-sizing: border-box;*/
-/*}*/
+* {
+    box-sizing: border-box;
+}
+    .alert-info {
+        display: flex;
+        justify-content: center;
+        border: 2px solid darkgrey;
+        padding: 1em;
+        background-color: lightcyan;
+    }
 
-/*    .alert-info a{*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        border: 1px solid darkgrey;*/
-/*        padding: 8px 64px;*/
-/*        background-color: lightcyan;*/
-/*        text-decoration: none;*/
-/*        color: black;*/
-/*    }*/
+    .alert-info a{
+        text-decoration: none;
+        color: black;
+    }
 
-/*    a {*/
-/*        font-family: Chalkboard;*/
-/*    }*/
+    a {
+        font-family: Chalkboard;
+    }
 
-/*    h1{*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        font-family: "Andale Mono";*/
-/*        font-weight: bold;*/
-/*    }*/
+    h1{
+        text-align: center;
+        font-family: "Andale Mono";
+        font-weight: bold;
+    }
 
-/*    nav {*/
-/*        box-sizing: border-box;*/
-/*        width: 100%;*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        align-self: center;*/
-/*    }*/
+    nav {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
 
-/*    .nav-links{*/
-/*        padding: 3px 0 3px 0;*/
-/*    }*/
+    .nav-links{
+        padding: 3px 0 3px 0;
+    }
 
-/*    .nav-links>li{*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        border: 4px solid white;*/
-/*        background-color: lightgrey;*/
-/*        list-style: none;*/
-/*    }*/
-/*!*resizing the image to fit the page*!*/
-/*.header-img img {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*}*/
+    .nav-links>li{
+        display: flex;
+        justify-content: center;
+        padding: 1em 0;
+        margin: 6px 0;
+        background-color: lightgrey;
+        list-style: none;
+    }
+/*resizing the image to fit the page*/
+.header-img img {
+    width: 100%;
+    height: auto;
+}
+
+.main {
+    margin-bottom: 3em;
+}
+.main>h2 {
+    font-size: 2em;
+}
+
+.sub-section {
+    font-style: italic;
+}
+
+.main>h2, .sub-section>h2 {
+    margin-bottom: .5em;
+}
+
+footer {
+    margin-top: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#social-media-links>a {
+    font-size: 1.5em;
+    margin: 0 4px;
+}
+
+
