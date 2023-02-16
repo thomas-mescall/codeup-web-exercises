@@ -42,11 +42,12 @@
                     </div>
                 </form>
             </nav>
+<!--            Searching for stores near you-->
                 <span class="border border-primary border-1 rounded-3">
                  <a class="text-primary text-decoration-none" href="#">Search stores near you!</a>
                 </span>
         </div>
-
+<!--        Sign up with icon-->
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="text-decoration-none text-muted" href="#">
@@ -60,8 +61,11 @@
 
     </div>
 </nav>
+
 <!--//////////////////////////////////////////////////////////////////-->
+
 <!--container for everything underneath nav bar-->
+
 <div class="container-fluid">
 <!--    banner: 'Welcome to Pizza World!'-->
     <div class="jumbotron d-flex">
@@ -69,30 +73,34 @@
             <h3 class="textOne d-flex justify-content-center"> Welcome to Pizza World!</h3>
         </div>
     </div>
+
     <!--//////////////////////////////////////////////////////////////////-->
+
     <h2>Build your own pizza!</h2>
+
 <!--importing buttons for selecting ingredients: Size and Crust, Cheese and Sauce, Toppings-->
+
     <div class="btn-group">
         <button type="button" class="btn btn-light" id="butOne"                  data-toggle="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#cardOne">
                 Size and Crust <span class="badge bg-secondary" id="bgOne">0</span>
         </button>
-        <button type="button" class="btn btn-light" id="butTwo">
+        <button type="button" class="btn btn-light" id="butTwo" data-toggle="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#cardTwo">
                 Cheese and Sauce <span class="badge bg-secondary">4</span>
         </button>
-        <button type="button" class="btn btn-light" id="butThree">
+        <button type="button" class="btn btn-light" id="butThree" data-toggle="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#cardThree">
                 Toppings <span class="badge bg-secondary">4</span>
         </button>
     </div>
+
 <!--//////////////////////////////////////////////////////////////////-->
+
 <!--    inserting card-->
+
     <h3 class="card-header bg-primary text-white">
         Choose Size and Crust
     </h3>
-<!--    <div class="open" id="labelOne">-->
-<!--    <div class="card accordion-item" id="mainCardOne" >-->
-<!--        <div class="card-body">-->
             <div class="card accordion open" id="cardOne">
-                <div class="card-header" id="cardTopOne">
+                <div class="card-header" id="cardTopOne-One">
                     Hand Tossed
 
                     <ul class="list-group">
@@ -114,9 +122,9 @@
                     </ul>
                 </div>
 
-
 <!--card for crispy thin -->
-                <div class="card-header" id="cardTopTwo">
+
+                <div class="card-header" id="cardTopOne-Two">
                     Crispy Thin
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -148,6 +156,71 @@
 
 <!--//////////////////////////////////////////////////////////////////-->
 
+    <div class="card accordion open" id="cardTwo">
+
+<!--        Card for Cheese selection-->
+
+        <div class="card-header" id="cardTopTwo-One">
+            Cheese
+            <ul class="list-group">
+                <li class="list-group-item">
+                    How Much?
+                </li>
+<!--                Different cheese selections-->
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                        Cheese Selection
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Light</a></li>
+                        <li><a class="dropdown-item" href="#">Normal</a></li>
+                        <li><a class="dropdown-item" href="#">Extra</a></li>
+                        <li><a class="dropdown-item" href="#">Double</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <!--card for sauce selection -->
+
+        <div class="card-header" id="cardTopTwo-Two">
+            Sauce
+            <ul class="list-group">
+                <li class="list-group-item">
+                    What type?
+                </li>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                        Sauce Selection
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Tomato</a></li>
+                        <li><a class="dropdown-item" href="#">Marinara</a></li>
+                        <li><a class="dropdown-item" href="#">BBQ</a></li>
+                        <li><a class="dropdown-item" href="#">Alfredo</a></li>
+                    </ul>
+                </div>
+                <li class="list-group-item">
+                    How Much?
+                </li>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                        Amount
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Light</a></li>
+                        <li><a class="dropdown-item" href="#">Normal</a></li>
+                        <li><a class="dropdown-item" href="#">Extra</a></li>
+                    </ul>
+                </div>
+
+            </ul>
+        </div>
+        <!--        pushing bottom button to the far right-->
+        <div class="bg-light d-grid gap-2 d-md-flex                            justify-content-md-end">
+            <a href="#" class="btn btn-primary" style="width: 115px">Next Step ></a>
+        </div>
+    </div>
 
 
 
