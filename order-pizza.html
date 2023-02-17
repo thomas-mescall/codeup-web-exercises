@@ -101,7 +101,7 @@
     <div class="mb-3 " >
         <label for="cardOne" class="form-label"></label>
 
-            <div class="card collapse" id="cardOne">
+            <div class="card" id="cardOne">
                 <div class="card-header" id="cardTopOne-One">
                     Hand Tossed
 
@@ -150,8 +150,8 @@
                         </ul>
                 </div>
                 <!--        pushing bottom button to the far right-->
-                <div class="bg-light d-grid gap-2 d-flex                            justify-content-md-end">
-                    <a class="btn btn-primary" style="width: 115px">Next Step ></a>
+                <div class="bg-light d-grid gap-2 d-flex                            justify-content-md-end ">
+                    <button class="btn btn-primary accordion" data-bs-toggle=collapse  data-bs-target=#cardTwo style="width: 115px">Next Step ></button>
                 </div>
             </div>
     </div>
@@ -222,8 +222,8 @@
         </div>
         <!--        pushing bottom button to the far right-->
         <div class="btn-group d-flex ms-auto" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary d-flex gap-2 justify-content-md-end" data-bs-target="cardCar" data-bs-slide="prev">< Prev</button>
-            <button type="button" class="btn btn-primary d-flex gap-2 justify-content-md-end" data-bs-target="cardCar" data-bs-slide="next">Next ></button>
+            <button type="button" class="btn btn-primary d-flex gap-2 justify-content-md-end" data-bs-toggle=collapse  data-bs-target=#cardOne">< Prev</button>
+            <button type="button" class="btn btn-primary d-flex gap-2 justify-content-md-end" data-bs-toggle=collapse  data-bs-target=#cardThree>Next ></button>
         </div>
 
     </div>
