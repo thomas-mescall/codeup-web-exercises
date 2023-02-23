@@ -1,0 +1,266 @@
+body {
+    background-color: #F0F0F0;
+}
+
+nav {
+    background-color: #F0F0F0;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+h1 {
+    margin: 8px 50px 8px 60px;
+}
+
+h1,h3{
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    justify-content: space-evenly;
+}
+
+@media(max-width: 576px) {
+    .lineBreak{
+        display: none;
+    }
+}
+
+.redOrange {
+    /*--bs-gutter-x: 0rem;*/
+    /*--bs-gutter-y: 1.5rem;*/
+    margin: 0;
+}
+
+/*circle labels and their properties*/
+.labelOne{
+    color: white;
+    font-size: small;
+    position: relative;
+    top: 25px;
+    left: 10px;
+}
+
+.labelTwo{
+    color: white;
+    font-size: small;
+    position: relative;
+    top: 25px;
+    left: 13px;
+}
+
+.labelThree{
+    color: white;
+    font-size: small;
+    position: relative;
+    top: 25px;
+    left: 14px;
+}
+
+.labelFour{
+    color: white;
+    font-size: small;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+/*circle containers and their properties*/
+.dot{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 0;
+}
+
+.dotOne {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #E6563B;
+}
+
+.dotTwo {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #EB9D3A;
+}
+
+.dotThree {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #7CB06C;
+}
+
+.dotFour {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #00AbA9;
+}
+
+/*#bigPid {*/
+/*    padding: 0;*/
+/*}*/
+
+/*#bigPidTwo {*/
+/*    padding: 0;*/
+/*}*/
+
+.bigP img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40%;
+}
+
+.imgTitle {
+    font-size: small;
+}
+
+/*small circle labels under img properties */
+.labelOneS{
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    position: relative;
+    bottom: 5px;
+    left: 4px;
+
+}
+
+.labelTwoS{
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    position: relative;
+    bottom: 5px;
+    left: 4px;
+
+}
+
+.labelThreeS{
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    position: relative;
+    bottom: 5px;
+    left: 4px;
+
+}
+
+.labelFourS{
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    position: relative;
+    bottom: 5px;
+    left: 4px;
+
+}
+
+/*small circle containers underneath img properties*/
+.dotOneS {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #E6563B;
+    margin: 0 3px 3px 90px;
+
+}
+
+.dotTwoS {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #EB9D3A;
+    margin: 0 3px 3px 3px;
+}
+
+.dotThreeS {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #7CB06C;
+    margin: 0 3px 3px 3px;
+}
+
+.dotFourS {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    background-color: #00AbA9;
+    margin: 0 3px 3px 3px;
+}
+
+.smallP>article{
+    font-family: 'Anton', sans-serif
+}
+
+.smallP img{
+    /*flex-wrap: wrap;*/
+    float: left;
+    width: 25%;
+    height: 15%;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+
+}
+.para{
+    margin-top: 60px;
+}
+
+@media (max-width: 576px) {
+    #theLast{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .theLastT{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    #bigCircles{
+        display: flow;
+
+    }
+}
+
+img {
+    border: #E6E6E6;
+}
+
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+
