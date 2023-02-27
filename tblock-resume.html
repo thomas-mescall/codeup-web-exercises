@@ -12,14 +12,20 @@
 <body>
 <!--inserting title container-->
 <div class="container">
-    <div class="t1 row">
-        <div class="title1 col">
-            <h3>CODY THE DUCK</h3>
+    <div class="t1 col">
+        <div class="title1 row">
+            <div class="col-3"></div>
+            <h3 class="col-6 d-flex justify-content-center">CODY THE DUCK</h3>
+            <div class="col-3"></div>
         </div>
     </div>
-    <div class="t2 row">
-        <div class="title2 col">
-            <h4>Software Developer</h4>
+</div>
+<div class="container">
+    <div class="t2 col">
+        <div class="title2 row">
+            <div class="col-3"></div>
+            <h4 class="col-6 d-flex justify-content-center">Software Developer</h4>
+            <div class="col-3"></div>
         </div>
     </div>
 </div>
@@ -27,27 +33,30 @@
 <!--inserting bio paragraph container-->
 <div class="container">
     <div class="p1 row">
-        <div class="bio1 col">
-            <article>
-                In this exercise you will build a t-block resume using the bootstrap grid system. The purpose of the T-Block resume is to have a single-page, easy-to-consume resume.
+        <div class="col-2"></div>
+            <article class="bio1 col-8 d-flex justify-content-center">
+                In this exercise you will build a t-block resume using the bootstrap grid system. The purpose of the T-Block resume is to have a single-page, easy-to-consume resume. In this exercise you will build a t-block resume using the bootstrap grid system.
             </article>
-        </div>
+        <div class="col-2"></div>
     </div>
 </div>
 
 <!--inserting contact information-->
 <div class="container">
-    <div class="contact">
-        <div class="row"><a href="#" target="img1"><img src="#" alt="phone number" id="imG1"></a> </div>
-        <div class="row"><a href="#" target="img2"><img src="#" alt="phone number" id="imG2"></a></div>
-        <div class="row"><a href="#" target="img3"><img src="#" alt="phone number" id="imG3"></a></div>
-        <div class="row"><a href="#" target="img4"><img src="#" alt="phone number" id="imG4"></a></div>
+    <div class="contact row">
+        <a class="col-3 d-flex justify-content-center" href="#" target="img1"><img src="#" alt="phone number" id="imG1"></a>
+        <a class="col-3 d-flex justify-content-center" href="#" target="img2"><img src="#" alt="phone number" id="imG2"></a>
+        <a class="col-3 d-flex justify-content-center" href="#" target="img3"><img src="#" alt="phone number" id="imG3"></a>
+        <a class="col-3 d-flex justify-content-center" href="#" target="img4"><img src="#" alt="phone number" id="imG4"></a>
     </div>
 </div>
 
+<!--inserting line break-->
+<hr>
+
 <!--inserting skills and abilities container-->
 <div class="container">
-    <div class="row">SKILLS AND ABILITIES</div>
+    <div class="row"><h5>SKILLS AND ABILITIES</h5>
     <div class="skb1 row">
         <div class="skb2 col">
             <ul>
@@ -58,46 +67,47 @@
             </ul>
         </div>
     </div>
+    </div>
 </div>
 
 <!--inserting academic achievements container-->
 <div class="container">
-    <div class="row">ACADEMIC</div>
-    <div class="acad row">
-        <div class="para col">
-            <article>
-                For this exercise, you do not need to include real resume information - placeholder lorem ipsum will be just fine. Additionally, since this code will be pushed to github, please refrain from putting your real phone number and email. - This is what the resume should look like on a very small screen to a medium size screen:
-            </article>
+    <div class="row"><h5>ACADEMIC</h5>
+        <div class="acad row">
+            <div class="para col">
+                <article>
+                    For this exercise, you do not need to include real resume information - placeholder lorem ipsum will be just fine. Additionally, since this code will be pushed to github, please refrain from putting your real phone number and email. - This is what the resume should look like on a very small screen to a medium size screen:
+                </article>
+            </div>
         </div>
     </div>
 </div>
 
 <!--inserting professional experience container-->
 <div class="container">
-    <div class="row">PROFESSIONAL EXPERIENCE</div>
-    <div class="proExp row">
-        <div class="job row">
-            <p>Job One</p>
-        </div>
-        <div class="descrip col">
-            <article>I did some stuuuff</article>
-        </div>
-
+    <div class="row"><h5>PROFESSIONAL EXPERIENCE</h5>
+<!--        job one-->
+            <div class="job row">
+                <p>Job One</p>
+            </div>
+            <div class="descrip col">
+                <article>I did some stuuuff</article>
+            </div>
+<!--        job two-->
+            <div class="job row">
+                <p>Job Two</p>
+            </div>
+            <div class="descrip col">
+                <article>I did some thaangs</article>
+            </div>
+<!--        job three-->
+            <div class="job row">
+                <p>Job Three</p>
+            </div>
+            <div class="descrip col">
+                <article>I did all the stuuuff and thaangs</article>
+            </div>
     </div>
-    <div class="proExp row">
-        <p>Job Two</p>
-    </div>
-    <div class="descrip col">
-        <article>I did some thaangs</article>
-    </div>
-
-    <div class="proExp row">
-        <p>Job Three</p>
-    </div>
-    <div class="descrip col">
-        <article>I did all the stuuuff and thaangs</article>
-    </div>
-
 </div>
 
 <!--inserting development projects container-->

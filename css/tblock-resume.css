@@ -3,11 +3,9 @@
     box-sizing: border-box;
 }
 
-.t1{
-    flex-direction: column;
+h3 h4 {
+    justify-content: center;
 }
 
-.title1>h3{
 
-}
 
