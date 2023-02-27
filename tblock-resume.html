@@ -34,7 +34,7 @@
 <div class="container">
     <div class="p1 row">
         <div class="col-2"></div>
-            <article class="bio1 col-8 d-flex justify-content-center">
+            <article class="bio1 col-8 text-justified d-flex justify-content-center">
                 In this exercise you will build a t-block resume using the bootstrap grid system. The purpose of the T-Block resume is to have a single-page, easy-to-consume resume. In this exercise you will build a t-block resume using the bootstrap grid system.
             </article>
         <div class="col-2"></div>
@@ -57,100 +57,108 @@
 
 <!--inserting line break-->
 <hr>
+<!--inserting container for left side of page-->
+<div class="container row">
+    <!--inserting col to adjust screens-->
+    <div class="col-md-6">
+        <!--inserting skills and abilities container-->
+        <div class="container">
+            <div class="row"><h5>SKILLS AND ABILITIES</h5>
+                <div class="skb1 row">
+                    <div class="skb2 col">
+                        <ul>
+                            <li>HTML</li>
+                            <li>Javascript</li>
+                            <li>C++</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!--inserting skills and abilities container-->
-<div class="container">
-    <div class="row"><h5>SKILLS AND ABILITIES</h5>
-        <div class="skb1 row">
-            <div class="skb2 col">
-                <ul>
-                    <li>HTML</li>
-                    <li>Javascript</li>
-                    <li>C++</li>
-                    <li>Bootstrap</li>
-                </ul>
+        <!--inserting academic achievements container-->
+        <div class="container">
+            <div class="row"><h5>ACADEMIC</h5>
+                <div class="acad row">
+                    <div class="para col">
+                        <article>
+                            For this exercise, you do not need to include real resume information - placeholder lorem ipsum will be just fine. Additionally, since this code will be pushed to github, please refrain from putting your real phone number and email. - This is what the resume should look like on a very small screen to a medium size screen:
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--inserting professional experience container-->
+        <div class="container">
+            <div class="row"><h5>PROFESSIONAL EXPERIENCE</h5>
+        <!--        job one-->
+                    <div class="job row">
+                        <p>Job One</p>
+                    </div>
+                    <div class="descrip col">
+                        <article>I did some stuuuff</article>
+                    </div>
+        <!--        job two-->
+                    <div class="job row">
+                        <p>Job Two</p>
+                    </div>
+                    <div class="descrip col">
+                        <article>I did some thaangs</article>
+                    </div>
+        <!--        job three-->
+                    <div class="job row">
+                        <p>Job Three</p>
+                    </div>
+                    <div class="descrip col">
+                        <article>I did all the stuuuff and thaangs</article>
+                    </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--inserting academic achievements container-->
-<div class="container">
-    <div class="row"><h5>ACADEMIC</h5>
-        <div class="acad row">
-            <div class="para col">
-                <article>
-                    For this exercise, you do not need to include real resume information - placeholder lorem ipsum will be just fine. Additionally, since this code will be pushed to github, please refrain from putting your real phone number and email. - This is what the resume should look like on a very small screen to a medium size screen:
-                </article>
+<!--inserting col to adjust screens-->
+    <div class="col-md-6">
+        <!--inserting development projects container-->
+        <div class="container">
+            <div class="row"><h5>DEVELOPMENT PROJECTS</h5>
+                <div class="dev row">
+                    <p>Cool Program</p>
+                    <div class="pro col">
+                        <article>cool stuff that i did</article>
+                    </div>
+                </div>
+                <div class="dev row">
+                    <p>Cool Program</p>
+                    <div class="pro col">
+                        <article>cool stuff that i did</article>
+                    </div>
+                </div>
+                <div class="dev row">
+                    <p>Cool Program</p>
+                    <div class="pro col">
+                        <article>cool stuff that i did</article>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!--inserting professional experience container-->
-<div class="container">
-    <div class="row"><h5>PROFESSIONAL EXPERIENCE</h5>
-<!--        job one-->
-            <div class="job row">
-                <p>Job One</p>
-            </div>
-            <div class="descrip col">
-                <article>I did some stuuuff</article>
-            </div>
-<!--        job two-->
-            <div class="job row">
-                <p>Job Two</p>
-            </div>
-            <div class="descrip col">
-                <article>I did some thaangs</article>
-            </div>
-<!--        job three-->
-            <div class="job row">
-                <p>Job Three</p>
-            </div>
-            <div class="descrip col">
-                <article>I did all the stuuuff and thaangs</article>
-            </div>
-    </div>
-</div>
-
-<!--inserting development projects container-->
-<div class="container">
-    <div class="row"><h5>DEVELOPMENT PROJECTS</h5>
-        <div class="dev row">
-            <p>Cool Program</p>
-            <div class="pro col">
-                <article>cool stuff that i did</article>
-            </div>
-        </div>
-        <div class="dev row">
-            <p>Cool Program</p>
-            <div class="pro col">
-                <article>cool stuff that i did</article>
-            </div>
-        </div>
-        <div class="dev row">
-            <p>Cool Program</p>
-            <div class="pro col">
-                <article>cool stuff that i did</article>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--inserting awards and decorations container-->
-<div class="container">
-    <div class="row"><h5>AWARDS AND INVOLVEMENT</h5>
-        <div class="medal row">
-            <p>1st Place</p>
-            <div class="involve col">
-                <article>I ran really fast</article>
-            </div>
-        </div>
-        <div class="medal row">
-            <p>3rd Place</p>
-            <div class="involve col">
-                <article>I did not run really fast</article>
+        <!--inserting awards and decorations container-->
+        <div class="container">
+            <div class="row"><h5>AWARDS AND INVOLVEMENT</h5>
+                <div class="medal row">
+                    <p>1st Place</p>
+                    <div class="involve col">
+                        <article>I ran really fast</article>
+                    </div>
+                </div>
+                <div class="medal row">
+                    <p>3rd Place</p>
+                    <div class="involve col">
+                        <article>I did not run really fast</article>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
