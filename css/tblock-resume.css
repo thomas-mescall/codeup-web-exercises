@@ -1,40 +1,13 @@
-#nameTitle{
+.container {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.t1{
+    flex-direction: column;
+}
+
+.title1>h3{
 
 }
 
-#bio{
-
-}
-
-#contact{
-
-}
-
-#leftSide{
-
-
-}
-
-#skillz{
-
-}
-
-#smarts{
-
-}
-
-#work{
-
-}
-
-#rightSide{
-
-}
-
-#folio{
-
-}
-
-#trophies{
-
-}
