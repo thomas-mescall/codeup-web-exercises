@@ -1,3 +1,7 @@
+* {
+    background: ;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -11,4 +15,12 @@ td, th {
 .coff {
     background-color: #f4e0cb;
     opacity: 0.5;
+}
+
+.coffeeBeans {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
 }
