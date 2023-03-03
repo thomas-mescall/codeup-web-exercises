@@ -163,7 +163,7 @@ function displayCoffees() {
 
     // Display the filtered coffees
     filteredCoffees.forEach(coffee => {
-        const li = document.createElement('li');
+        const li = document.createElement('p');
         li.textContent = coffee.name;
         coffeeList.appendChild(li);
     });
