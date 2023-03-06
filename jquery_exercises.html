@@ -36,9 +36,25 @@
     // $('li').css('font-size', '20px');
     // $('h1', 'p', 'li').css();
 
-    var content = $(".title").html();
-    alert(content);
+    // var content = $(".title").html();
+    // alert(content);
     // console.log(content);
+
+    $('h1').click(function () {
+        $('.title').css('background-color','blue');
+    });
+
+    $('p').dblclick(function () {
+        $('#paragraph').css('font-size', '18px');
+    });
+
+    $('li').hover(
+        function() {
+        $(this).css('background-color', 'red');
+        },
+        function () {
+            $(this).css('background-color', 'black');
+        });
 
 
 </script>
