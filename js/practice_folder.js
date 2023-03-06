@@ -8,7 +8,7 @@ function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<span class"' + coffee.id + '"></span>';
     html += '<text class="text-#9b4c38">' + coffee.name + " " + '</text>';
-    html += '<sub class="text-black">' + coffee.roast + '</sub>';
+    html += '<text class="text-black">' + coffee.roast + '</text>';
     html += '</div>';
 
     return html;
