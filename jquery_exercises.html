@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery</title>
-
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<div class="document">
+    <h1 class="title">Page Title</h1>
+    <p class="codeup" id="paragraph">something something I don't know what to write</p>
+    <ul id="listHeader">Here's a list of some stuff:
+        <li class="codeup">apple</li>
+        <li>orange</li>
+        <li class="codeup">potato</li>
+    </ul>
+
+</div>
+
+
 
 <script>
     // window.onload = function() {
-    //     alert( 'The page has finished loading!' );
+    //     // alert( 'The page has finished loading!' );
     // }
-    $(function() {
-        alert("DOM finished loading");
-    });
+    // $(function() {
+    //     alert("DOM finished loading");
+    // });
+    //
+    //
+    // var contents = $('#listHeader').html();
+    // alert(contents);
+
+    // $('.codeup').css('border', '1px solid red');
+
+    // $('li').css('font-size', '20px');
+    // $('h1', 'p', 'li').css();
+
+    var content = $(".title").html();
+    alert(content);
+    // console.log(content);
+
 
 </script>
 
