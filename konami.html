@@ -25,20 +25,20 @@
     // }
 
     var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-    var konamiIndex = 0;
+    var index = 0;
     var temp = [];
 
 
-    $(document).keypress(function(event){
+    $(document).keyup(function(event){
         temp.push(event.keyCode);
-        if(temp.length > 10) {
+        // console.log(temp);
+        if(temp.length > 11) {
             temp.shift();
         }
         if(temp.toString() == konami.toString()) {
+            // console.log("warning");
             alert("You have added 30 lives!");
         }
-
-
     });
 
 
