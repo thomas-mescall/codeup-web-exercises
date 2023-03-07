@@ -33,23 +33,101 @@
   </dl>
 </div>
 <a href="#" class="anchor">Click to toggle description</a>
+
+<div>
+  <h3>National Park 1</h3>
+  <ul>
+    <li>fact one</li>
+    <li>fact two</li>
+    <li>fact three</li>
+    <li>fact four</li>
+  </ul>
+</div>
+<div>
+  <h3>National Park 2</h3>
+  <ul>
+    <li>fact one</li>
+    <li>fact two</li>
+    <li>fact three</li>
+    <li>fact four</li>
+  </ul>
+</div>
+<div>
+  <h3>National Park 3</h3>
+  <ul>
+    <li>fact one</li>
+    <li>fact two</li>
+    <li>fact three</li>
+    <li>fact four</li>
+  </ul>
+</div>
+
+
+<button class="but1">Click Here</button>
+
+
 <script>
 
+  $(document).ready(function () {
+    $('.but1').click(function () {
+      $('ul').each(function () {
+        $(this).find('li:last').css('background-color', 'yellow');
+      });
+    });
 
-$(document).ready(function() {
-  $('.anchor').click(function (e){
-    e.preventDefault();
-    $('.anchor').toggleClass('.invisible');
-    $('.invisible').css('visibility', 'hidden');
-  });
-  $('.anchor').dblclick(function (e) {
-    e.preventDefault();
-    $('.invisible').css('visibility', 'visible');
-  });
-  $('dt').click(function (){
-    $(this).css('background-color','yellow');
-  });
-});
+    $('h3').click(function (){
+      $('ul').children().css('font-weight','bold');
+    });
+
+    $('li').click(function(){
+      console.log("working");
+      $(this).parent('ul').find('li:first').css('color','blue');
+      //this parent > first li of this parent > that li change color
+      // $(this).parent(function (){
+      //   $(this).css("background-color", "rebeccapurple");
+      //   console.log("also working");
+        // ('li').css('font-color','blue');
+      // });
+      });
+    });
+
+
+
+  // $('li').each(function(index) {
+  //   if (index === 1) {
+  //     $(this).css('background-color', '#FF0');
+  //   }
+  // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $(document).ready(function() {
+//   $('.anchor').click(function (e){
+//     e.preventDefault();
+//     $('.anchor').toggleClass('.invisible');
+//     $('.invisible').css('visibility', 'hidden');
+//   });
+//   $('.anchor').dblclick(function (e) {
+//     e.preventDefault();
+//     $('.invisible').css('visibility', 'visible');
+//   });
+//   $('dt').click(function (){
+//     $(this).css('background-color','yellow');
+//   });
+// });
 
 
 
