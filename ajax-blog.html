@@ -13,14 +13,17 @@
 
 <script>
     $.ajax("data/blog.json")
-    .done(function (data){
+    .done(function (data){ //<-insert some form of a loop to iterate through build
+        let cateGories = data.categories.toString();
+        console.log(data);
         let html;
         html += '<div>' ;
         html += '<h3>' + data.title + '</h3>';
         html += '<article>' + data.content + '</article>';
-        html += '<sub>' + data.categories.toString() + '</sub>';
+        html += '<sub>' + cateGories + '</sub>';
+        html += '<span>' + data.date + '</span>';
         html += + '</div>';
-        $('#posts').html(html);
+        $('#posts').append(html);
         // return html;
     })
 </script>
