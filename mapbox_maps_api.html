@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+<!--  inserting Mapbox JS-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<!--    inserting Mapbox CSS-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet'>
+</head>
+
+<body>
+
+<div id='map' style='width: 800px; height: 700px;'></div>
+
+<script>
+
+    var token = mapboxgl.accessToken = 'pk.eyJ1IjoidHRtZXNjYWwiLCJhIjoiY2xmMnk1anF3MG14ajNybGhwOWV6ZTlqcSJ9.83K6uHuN8udJLIM9cvPGag';
+
+    mapboxgl.accessToken = token;
+    var map = new mapboxgl.Map({ //<-- this creates the structure/orientation of the map
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 10,
+        center: [-95.465558, 29.739782]
+    });
+
+    var marker = new mapboxgl.Marker() //<-- marker
+        .setLngLat([-95.465558, 29.739782])
+        .addTo(map)
+
+    myPopup = new mapboxgl.Popup(); //<-- this is your popup
+    myPopup.setLngLat([-95.465558, 29.739782]);
+    myPopup.setHTML("<span> Fig & Olive </span>");
+
+    marker.setPopup(myPopup); //<-- this line attaches the popup to your marker
+
+    myResturants = [
+        {
+            name: "<span> resturant 1 </span>",
+            lng: -95.473101,
+            lat: 29.733564
+        },
+        {
+            name: "<span> resturant 2 </span>",
+            lng: -95.485804,
+            lat: 29.813726
+        },
+        {
+            name: "<span> resturant 3 </span>",
+            lng: -95.450099,
+            lat: 29.851848
+        }
+    ];
+
+    myResturants.forEach(function(){
+        var newMarker = mapboxgl.Marker()
+            .setLngLat([lng, lat])
+            .addTo(map);
+        var newPopup = new mapboxgl.Popup()
+        newPopup.setLngLat([lng,lat])
+        newPopup.setHTML(name);
+    });
+
+    // function geocode(search, token) {
+    //     var baseUrl = 'https://api.mapbox.com';
+    //     var endPoint = '/geocoding/v5/mapbox.places/';
+    //     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+    //         .then(function(res) {
+    //             return res.json();
+    //             // to get all the data from the request, comment out the following three lines...
+    //          }).then(function(data) {
+    //             return data.features[0].center;
+    //         });
+    // }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
