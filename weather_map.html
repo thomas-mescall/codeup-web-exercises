@@ -26,6 +26,7 @@
     <script src="js/mapbox-geocoder-utils.js"></script>
 
 </head>
+
 <body>
 <!--bootstrap search bar for navigating to different location-->
 <nav class="navbar bg-body-tertiary">
@@ -40,35 +41,34 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand">Sunny Side Weather Depot</a>
-<!--        <form class="d-flex" role="">-->
-<!--&lt;!&ndash;            insert location tracker&ndash;&gt;-->
-<!--        </form>-->
+            <form class="d-flex" >
+                <text class="tracker"></text>
+            </form>
     </div>
 </nav>
 
+<br>
+<br>
+
 <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">
+    <div class="col-2 border border-primary">
         <div id="currentWeather"></div>
     </div>
-    <div class="col-4"></div>
-</div>
-<div class="row">
-    <div class="col-3">
+    <div class="col-2 border border-primary">
         <div id="dayOneWeather"></div>
     </div>
-    <div class="col-3">
+    <div class="col-2 border border-primary">
         <div id="dayTwoWeather"></div>
     </div>
-    <div class="col-3">
+    <div class="col-2 border border-primary">
         <div id="dayThreeWeather"></div>
     </div>
-    <div class="col-3">
+    <div class="col-2 border border-primary">
         <div id="dayFourWeather"></div>
     </div>
 </div>
 
-<div id="weatherBody"></div>
+<div id="weatherBody border border-primary"></div>
 <div id='map' draggable="true" style='width: auto; height: 500px;'></div>
 <pre id = "coordinates" class="coordinates"></pre>
 
@@ -99,47 +99,26 @@
         .setLngLat([0, 0])
         .addTo(map);
 
-    //559e77b41608b83b5bdfcf59e45ac867 <-- weather key
-    // 29.726877, -95.356226 <-- Houston lng & lat
-    // requesting data from weather api
-
-    // 29.726877, -95.356226 <-- Houston lng & lat
-
     function onDragEnd() {
         const lngLat = marker.getLngLat();
         $.ajax({
             url: `https://api.openweathermap.org/data/3.0/onecall?lat=${lngLat.lat}&lon=${lngLat.lng}&unit=imperial&appid=${weatherKey}`
         }).done(function (data) {
-            // let currentList = "";
-            // let dateObj = new Date((data.current.dt) * 1000);
-            // let utcString = dateObj.toUTCString();
-            // let time = utcString.slice(-11, -4);
-            // let description = data.current.weather[0].description;
-            // let humidity = data.current.humidity;
-            // let wind = data.current.wind_speed;
-            // let pressure = data.current.pressure;
-            //
-            // currentList +=
-            //     '<div class="card" id="currentWeather" style="width: 12rem;">' +
-            //     '<div class="card-body">' +
-            //     '<p>'+ 'Date: ' + time + '</p>' +
-            //     '<p>' + 'Description: ' + description + '</p>' +
-            //     '<p>' + 'Humidity: ' + humidity + '</p>' +
-            //     '<p>' + 'Wind: ' + wind + '</p>' +
-            //     '<p>' + 'Pressure: ' + pressure + '</p>' +
-            //     '</div>' + '</div>';
-            //
-            // $("#currentWeather").html(currentList);
-            //
+            console.log(data);
             currentWeather(data);
             dayOne(data);
             dayTwo(data);
             dayThree(data);
             dayFour(data);
         });
+        geocode(lngLat, token).then(function(result){
+            reverseGeocode(result, token).then(function (result){
+        $('.tracker').html(result);
+            })
+        })
     }
     marker.on('dragend', onDragEnd);
-// function searchBar(data) {
+
     let newLocation = document.querySelector('#mapSearch');
     newLocation.addEventListener('change', function (){
         geocode(newLocation.value, token).then(function (results) {
@@ -148,6 +127,7 @@
                 center: results,
                 zoom: 9
             });
+
             $.ajax({
                 url: `https://api.openweathermap.org/data/3.0/onecall?lat=${results[1]}&lon=${results[0]}&unit=imperial&appid=${weatherKey}`
             }).done(function (data) {
@@ -157,24 +137,33 @@
                 dayThree(data);
                 dayFour(data);
             })
+            $('.tracker').html(newLocation.value);
         });
     });
-// }
-//     marker.on('keypress', searchBar)
+
+    let dateConversion = function(timeStamp) {
+        let date = new Date(timeStamp * 1000).toLocaleString("en-US", {
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+        });
+        return date;
+    }
 
     function currentWeather(data){
         let currentList = "";
         let dateObj = new Date((data.current.dt) * 1000);
-        let utcString = dateObj.toUTCString();
-        let time = utcString.slice(-11, -4);
+        let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
+        // let utcString = dateObj.toUTCString();
+        // let time = utcString.slice(-11, -4);
         let description = data.current.weather[0].description;
         let humidity = data.current.humidity;
         let wind = data.current.wind_speed;
         let pressure = data.current.pressure;
 
         currentList +=
-            '<div class="card" id="currentWeather" style="width: 12rem;">' +
-            '<div class="card-body">' +
+            '<div>' +
+            '<div>' +
             '<p>'+ 'Date: ' + time + '</p>' +
             '<p>' + 'Description: ' + description + '</p>' +
             '<p>' + 'Humidity: ' + humidity + '</p>' +
@@ -187,18 +176,18 @@
 
     function dayOne(data){
         let currentList = "";
-        // for(var i = 0; i < data.current.daily.length; i++)
         let dateObj =new Date((data.daily[0].dt) * 1000);
-        let utcString = dateObj.toUTCString();
-        let time = utcString.slice(-11, -4);
+        let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
+        // let utcString = dateObj.toUTCString();
+        // let time = utcString.slice(-11, -4);
         let description = data.daily[0].weather[0].description;
         let humidity = data.daily[0].humidity;
         let wind = data.daily[0].wind_speed;
         let pressure = data.daily[0].pressure;
 
         currentList +=
-            '<div class="card" id="currentWeather" style="width: 12rem;">' +
-            '<div class="card-body">' +
+            '<div>' +
+            '<div>' +
             '<p>'+ 'Date: ' + time + '</p>' +
             '<p>' + 'Description: ' + description + '</p>' +
             '<p>' + 'Humidity: ' + humidity + '</p>' +
@@ -211,18 +200,18 @@
 
     function dayTwo(data){
         let currentList = "";
-        // for(var i = 0; i < data.current.daily.length; i++)
         let dateObj =new Date((data.daily[1].dt) * 1000);
-        let utcString = dateObj.toUTCString();
-        let time = utcString.slice(-11, -4);
+        let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
+        // let utcString = dateObj.toUTCString();
+        // let time = utcString.slice(-11, -4);
         let description = data.daily[1].weather[0].description;
         let humidity = data.daily[1].humidity;
         let wind = data.daily[1].wind_speed;
         let pressure = data.daily[1].pressure;
 
         currentList +=
-            '<div class="card" id="currentWeather" style="width: 12rem;">' +
-            '<div class="card-body">' +
+            '<div>' +
+            '<div>' +
             '<p>'+ 'Date: ' + time + '</p>' +
             '<p>' + 'Description: ' + description + '</p>' +
             '<p>' + 'Humidity: ' + humidity + '</p>' +
@@ -235,18 +224,18 @@
 
     function dayThree(data){
         let currentList = "";
-        // for(var i = 0; i < data.current.daily.length; i++)
         let dateObj =new Date((data.daily[2].dt) * 1000);
-        let utcString = dateObj.toUTCString();
-        let time = utcString.slice(-11, -4);
+        let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
+        // let utcString = dateObj.toUTCString();
+        // let time = utcString.slice(-11, -4);
         let description = data.daily[2].weather[0].description;
         let humidity = data.daily[2].humidity;
         let wind = data.daily[2].wind_speed;
         let pressure = data.daily[2].pressure;
 
         currentList +=
-            '<div class="card" id="currentWeather" style="width: 12rem;">' +
-            '<div class="card-body">' +
+            '<div>' +
+            '<div>' +
             '<p>'+ 'Date: ' + time + '</p>' +
             '<p>' + 'Description: ' + description + '</p>' +
             '<p>' + 'Humidity: ' + humidity + '</p>' +
@@ -259,18 +248,18 @@
 
     function dayFour(data){
         let currentList = "";
-        // for(var i = 0; i < data.current.daily.length; i++)
         let dateObj =new Date((data.daily[3].dt) * 1000);
-        let utcString = dateObj.toUTCString();
-        let time = utcString.slice(-11, -4);
+        let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
+        // let utcString = dateObj.toUTCString();
+        // let time = utcString.slice(-11, -4);
         let description = data.daily[3].weather[0].description;
         let humidity = data.daily[3].humidity;
         let wind = data.daily[3].wind_speed;
         let pressure = data.daily[3].pressure;
 
         currentList +=
-            '<div class="card" id="currentWeather" style="width: 12rem;">' +
-            '<div class="card-body">' +
+            '<div>' +
+            '<div>' +
             '<p>'+ 'Date: ' + time + '</p>' +
             '<p>' + 'Description: ' + description + '</p>' +
             '<p>' + 'Humidity: ' + humidity + '</p>' +
@@ -280,40 +269,6 @@
 
         $("#dayFourWeather").html(currentList)
     }
-
-
-
-
-
-
-    // // geocode method to move to new location using listeners
-    // let newLocation = document.querySelector('#mapSearch');
-    // newLocation.addEventListener('change', function(e){
-    //     geocode(newLocation.value, token).then(function (result) {
-    //         map.setCenter(result);
-    //         map.setZoom(17);
-    //         var newInfo = {
-    //             address: newLocation.value,
-    //             popupHTML: "<p>Why hello there</p>"
-    //         };
-    //         //function for placing markers with geocode
-    //         function placeMarkerAndPopup(info, token, map) {
-    //             geocode(info.address, token).then(function(coordinates) {
-    //                 var popup = new mapboxgl.Popup()
-    //                     .setHTML(info.popupHTML);
-    //                 var marker = new mapboxgl.Marker({
-    //                    draggable: true
-    //                })
-    //                     .setLngLat(coordinates)
-    //                     .addTo(map)
-    //                     .setPopup(popup);
-    //                 popup.addTo(map);
-    //             });
-    //         }
-    //          placeMarkerAndPopup(newInfo, myToken, map);
-    //         //insert function for onDragEnd
-    //     })
-    // });
 
 </script>
 
