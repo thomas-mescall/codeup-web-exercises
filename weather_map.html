@@ -40,8 +40,9 @@
 <!--bootstrap nav bar with current location tacked onto the end-->
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand">Sunny Side Weather Depot</a>
-            <form class="d-flex" >
+
+        <a class="navbar-brand"><img id="navBaby" src="img/teletubby-baby.webp" alt="teletubby-baby">Sunny Side Weather Depot</a>
+            <form class="d-flex">
                 <text class="tracker"></text>
             </form>
     </div>
@@ -158,6 +159,7 @@
         let humidity = data.current.humidity;
         let wind = data.current.wind_speed;
         let pressure = data.current.pressure;
+        let temp = ((data.current.temp - 273) * (9/5) + 32).toFixed(1);
 
         currentList +=
             '<div>' +
@@ -167,6 +169,7 @@
             '<p>' + 'Humidity: ' + humidity + '</p>' +
             '<p>' + 'Wind: ' + wind + '</p>' +
             '<p>' + 'Pressure: ' + pressure + '</p>' +
+            '<p>' + 'Temperature: '+ temp + '</p>' +
             '</div>' + '</div>';
 
         $("#currentWeather").html(currentList);
@@ -180,6 +183,7 @@
         let humidity = data.daily[0].humidity;
         let wind = data.daily[0].wind_speed;
         let pressure = data.daily[0].pressure;
+        let temp = ((data.daily[0].temp.day - 273) * (9/5) + 32).toFixed(1);
 
         currentList +=
             '<div>' +
@@ -189,6 +193,7 @@
             '<p>' + 'Humidity: ' + humidity + '</p>' +
             '<p>' + 'Wind: ' + wind + '</p>' +
             '<p>' + 'Pressure: ' + pressure + '</p>' +
+            '<p>' + 'Temperature: '+ temp + '</p>' +
             '</div>' + '</div>';
 
         $("#dayOneWeather").html(currentList)
@@ -202,6 +207,7 @@
         let humidity = data.daily[1].humidity;
         let wind = data.daily[1].wind_speed;
         let pressure = data.daily[1].pressure;
+        let temp = ((data.daily[1].temp.day - 273) * (9/5) + 32).toFixed(1);
 
         currentList +=
             '<div>' +
@@ -211,6 +217,7 @@
             '<p>' + 'Humidity: ' + humidity + '</p>' +
             '<p>' + 'Wind: ' + wind + '</p>' +
             '<p>' + 'Pressure: ' + pressure + '</p>' +
+            '<p>' + 'Temperature: '+ temp + '</p>' +
             '</div>' + '</div>';
 
         $("#dayTwoWeather").html(currentList)
@@ -224,6 +231,7 @@
         let humidity = data.daily[2].humidity;
         let wind = data.daily[2].wind_speed;
         let pressure = data.daily[2].pressure;
+        let temp = ((data.daily[2].temp.day - 273) * (9/5) + 32).toFixed(1);
 
         currentList +=
             '<div>' +
@@ -233,6 +241,7 @@
             '<p>' + 'Humidity: ' + humidity + '</p>' +
             '<p>' + 'Wind: ' + wind + '</p>' +
             '<p>' + 'Pressure: ' + pressure + '</p>' +
+            '<p>' + 'Temperature: '+ temp + '</p>' +
             '</div>' + '</div>';
 
         $("#dayThreeWeather").html(currentList)
@@ -246,6 +255,7 @@
         let humidity = data.daily[3].humidity;
         let wind = data.daily[3].wind_speed;
         let pressure = data.daily[3].pressure;
+        let temp = ((data.daily[3].temp.day - 273) * (9/5) + 32).toFixed(1);
 
         currentList +=
             '<div>' +
@@ -255,6 +265,7 @@
             '<p>' + 'Humidity: ' + humidity + '</p>' +
             '<p>' + 'Wind: ' + wind + '</p>' +
             '<p>' + 'Pressure: ' + pressure + '</p>' +
+            '<p>' + 'Temperature: '+ temp + '</p>' +
             '</div>' + '</div>';
 
         $("#dayFourWeather").html(currentList)
