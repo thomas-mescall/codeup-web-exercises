@@ -154,8 +154,6 @@
         let currentList = "";
         let dateObj = new Date((data.current.dt) * 1000);
         let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
-        // let utcString = dateObj.toUTCString();
-        // let time = utcString.slice(-11, -4);
         let description = data.current.weather[0].description;
         let humidity = data.current.humidity;
         let wind = data.current.wind_speed;
@@ -178,8 +176,6 @@
         let currentList = "";
         let dateObj =new Date((data.daily[0].dt) * 1000);
         let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
-        // let utcString = dateObj.toUTCString();
-        // let time = utcString.slice(-11, -4);
         let description = data.daily[0].weather[0].description;
         let humidity = data.daily[0].humidity;
         let wind = data.daily[0].wind_speed;
@@ -202,8 +198,6 @@
         let currentList = "";
         let dateObj =new Date((data.daily[1].dt) * 1000);
         let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
-        // let utcString = dateObj.toUTCString();
-        // let time = utcString.slice(-11, -4);
         let description = data.daily[1].weather[0].description;
         let humidity = data.daily[1].humidity;
         let wind = data.daily[1].wind_speed;
@@ -226,8 +220,6 @@
         let currentList = "";
         let dateObj =new Date((data.daily[2].dt) * 1000);
         let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
-        // let utcString = dateObj.toUTCString();
-        // let time = utcString.slice(-11, -4);
         let description = data.daily[2].weather[0].description;
         let humidity = data.daily[2].humidity;
         let wind = data.daily[2].wind_speed;
@@ -250,8 +242,6 @@
         let currentList = "";
         let dateObj =new Date((data.daily[3].dt) * 1000);
         let time = (dateObj.getMonth() +1) + '/' + dateObj.getDate() + '/' + dateObj.getFullYear();
-        // let utcString = dateObj.toUTCString();
-        // let time = utcString.slice(-11, -4);
         let description = data.daily[3].weather[0].description;
         let humidity = data.daily[3].humidity;
         let wind = data.daily[3].wind_speed;
