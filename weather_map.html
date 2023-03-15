@@ -94,28 +94,42 @@
         style: 'mapbox://styles/mapbox/streets-v11',
     });
 
-    const marker = new mapboxgl.Marker({
+    let marker = new mapboxgl.Marker({
         draggable: true
     })
         .setLngLat([0, 0])
         .addTo(map);
+    function onClick() {
 
-    function onDragEnd() {
-        const lngLat = marker.getLngLat();
+        let lngLat = marker.getLngLat();
         $.ajax({
             url: `https://api.openweathermap.org/data/3.0/onecall?lat=${lngLat.lat}&lon=${lngLat.lng}&unit=imperial&appid=${weatherKey}`
         }).done(function (data) {
-            console.log(data);
             currentWeather(data);
             dayOne(data);
             dayTwo(data);
             dayThree(data);
             dayFour(data);
         });
-        geocode(lngLat, token).then(function(result){
-            reverseGeocode(result, token).then(function (result){
+        reverseGeocode(lngLat, token).then(function(result){
+            $('.tracker').html(result);
+        })
+    }
+    marker.on('click', onClick);
+    function onDragEnd() {
+        let lngLat = marker.getLngLat();
+        $.ajax({
+            url: `https://api.openweathermap.org/data/3.0/onecall?lat=${lngLat.lat}&lon=${lngLat.lng}&unit=imperial&appid=${weatherKey}`
+        }).done(function (data) {
+            currentWeather(data);
+            dayOne(data);
+            dayTwo(data);
+            dayThree(data);
+            dayFour(data);
+        });
+        console.log(lngLat);
+        reverseGeocode(lngLat, token).then(function(result){
         $('.tracker').html(result);
-            })
         })
     }
     marker.on('dragend', onDragEnd);
