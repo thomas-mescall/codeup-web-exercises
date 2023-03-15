@@ -94,24 +94,30 @@
         style: 'mapbox://styles/mapbox/streets-v11',
     });
 
-    $("#map").click(function (e){
-        let marker = new mapboxgl.Marker()
-            .setLngLat([-95.356226, 29.726877])
-            .addTo(map);
-    })
-    // const marker = new mapboxgl.Marker({
-    //     draggable: true
+    // $("#map").click(function (e){
+    //     let marker = new mapboxgl.Marker()
+    //         .setLngLat([-95.356226, 29.726877])
+    //         .addTo(map);
     // })
-    //
-    //     .setLngLat([0, 0])
-    //     .addTo(map);
-    //
-    // function onDragEnd() {
-    //     const lngLat = marker.getLngLat();
-    //     coordinates.style.display = 'block';
-    //     coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-    // }
-    // marker.on('dragend', onDragEnd);
+
+    const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([0, 0])
+        .addTo(map);
+    // let lngLat = marker.getLngLat();
+    // console.log(lngLat);
+    // let lng = lngLat.lng;
+
+
+    function onDragEnd() {
+        $.ajax({
+            url: `https://api.openweathermap.org/data/3.0/onecall?lat=${lngLat.lat}&lon=${lngLat.lng}&unit=imperial&appid=${weatherKey}`})
+        const lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML = `Longitude: ${lngLat.lng}<br/>Latitude: ${lngLat.lat}`;
+    }
+    marker.on('dragend', onDragEnd);
 
     //559e77b41608b83b5bdfcf59e45ac867 <-- weather key
     // 29.726877, -95.356226 <-- Houston lng & lat
