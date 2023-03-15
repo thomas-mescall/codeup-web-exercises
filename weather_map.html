@@ -40,16 +40,20 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand">Sunny Side Weather Depot</a>
-        <form class="d-flex" role="">
-<!--            insert location tracker-->
-        </form>
+<!--        <form class="d-flex" role="">-->
+<!--&lt;!&ndash;            insert location tracker&ndash;&gt;-->
+<!--        </form>-->
     </div>
 </nav>
 
 <div class="row">
-    <div class="col-3">
+    <div class="col-4"></div>
+    <div class="col-4">
         <div id="currentWeather"></div>
     </div>
+    <div class="col-4"></div>
+</div>
+<div class="row">
     <div class="col-3">
         <div id="dayOneWeather"></div>
     </div>
@@ -84,59 +88,166 @@
 
     mapboxgl.accessToken = token;
     let coordinates = document.getElementById('coordinates');
+    console.log(coordinates);
     var map = new mapboxgl.Map({ //<-- this creates the structure/orientation of the map
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
     });
 
-    const marker = new mapboxgl.Marker({
-        draggable: true
+    $("#map").click(function (e){
+        let marker = new mapboxgl.Marker()
+            .setLngLat([-95.356226, 29.726877])
+            .addTo(map);
     })
-        .setLngLat([0, 0])
-        .addTo(map);
-
-    function onDragEnd() {
-        const lngLat = marker.getLngLat();
-        coordinates.style.display = 'block';
-        coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-    }
-
-    marker.on('dragend', onDragEnd);
-
+    // const marker = new mapboxgl.Marker({
+    //     draggable: true
+    // })
+    //
+    //     .setLngLat([0, 0])
+    //     .addTo(map);
+    //
+    // function onDragEnd() {
+    //     const lngLat = marker.getLngLat();
+    //     coordinates.style.display = 'block';
+    //     coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+    // }
+    // marker.on('dragend', onDragEnd);
 
     //559e77b41608b83b5bdfcf59e45ac867 <-- weather key
     // 29.726877, -95.356226 <-- Houston lng & lat
     // requesting data from weather api
-    $.get(`https://api.openweathermap.org/data/3.0/onecall?lat=29.726877&lon=-95.356226&appid=${weatherKey}`).done(function(data) {
+    $.ajax({
+    url: `https://api.openweathermap.org/data/3.0/onecall?lat=29.726877&lon=-95.356226&unit=imperial&appid=${weatherKey}`}).done(function(data) {
         let currentList = "";
-        console.log(currentList);
-        for(var i = 0; i < data.length; i++) {
+        console.log(data);
             console.log("is this working?");
-            let date = data.current[i].dt;
-            console.log(date);
-            let description = data.current[i].weather[i].description;
-            console.log(description);
-            let humidity = data.current[i].humidity;
-            console.log(humidity);
-            let wind = data.current[i].wind_speed;
-            console.log(wind);
-            let pressure = data.current[i].pressure;
-            console.log(pressure);
+            let dateObj =new Date((data.current.dt) * 1000);
+            let utcString = dateObj.toUTCString();
+            let time = utcString.slice(-11, -4);
+            let description = data.current.weather[0].description;
+            let humidity = data.current.humidity;
+            let wind = data.current.wind_speed;
+            let pressure = data.current.pressure;
 
             currentList +=
-                    '<div class="card" style="width: 18rem;">' +
+                    '<div class="card" id="currentWeather" style="width: 12rem;">' +
                     '<div class="card-body">' +
-                    '<p>' + date + '</p>' +
+                    '<p>' + time + '</p>' +
                     '<p>' + description + '</p>' +
                     '<p>' + humidity + '</p>' +
                     '<p>' + wind + '</p>' +
                     '<p>' + pressure + '</p>' +
                     '</div>' + '</div>';
 
-            $('#currentWeather').html(currentList)
-        }
-        console.log(data);
-    })
+            $("#currentWeather").html(currentList);
+        let dateObj2 =new Date((data.daily[0].dt) * 1000);
+        console.log(dateObj2);
+        dayOne(data);
+        dayTwo(data);
+        dayThree(data);
+        dayFour(data);
+    });
+
+    function dayOne(data){
+        let currentList = "";
+        // for(var i = 0; i < data.current.daily.length; i++)
+        let dateObj =new Date((data.daily[0].dt) * 1000);
+        let utcString = dateObj.toUTCString();
+        let time = utcString.slice(-11, -4);
+        let description = data.daily[0].weather[0].description;
+        let humidity = data.daily[0].humidity;
+        let wind = data.daily[0].wind_speed;
+        let pressure = data.daily[0].pressure;
+
+        currentList +=
+            '<div class="card" id="currentWeather" style="width: 12rem;">' +
+            '<div class="card-body">' +
+            '<p>' + time + '</p>' +
+            '<p>' + description + '</p>' +
+            '<p>' + humidity + '</p>' +
+            '<p>' + wind + '</p>' +
+            '<p>' + pressure + '</p>' +
+            '</div>' + '</div>';
+
+        $("#dayOneWeather").html(currentList)
+    }
+
+    function dayTwo(data){
+        let currentList = "";
+        // for(var i = 0; i < data.current.daily.length; i++)
+        let dateObj =new Date((data.daily[1].dt) * 1000);
+        let utcString = dateObj.toUTCString();
+        let time = utcString.slice(-11, -4);
+        let description = data.daily[1].weather[0].description;
+        let humidity = data.daily[1].humidity;
+        let wind = data.daily[1].wind_speed;
+        let pressure = data.daily[1].pressure;
+
+        currentList +=
+            '<div class="card" id="currentWeather" style="width: 12rem;">' +
+            '<div class="card-body">' +
+            '<p>' + time + '</p>' +
+            '<p>' + description + '</p>' +
+            '<p>' + humidity + '</p>' +
+            '<p>' + wind + '</p>' +
+            '<p>' + pressure + '</p>' +
+            '</div>' + '</div>';
+
+        $("#dayTwoWeather").html(currentList)
+    }
+
+    function dayThree(data){
+        let currentList = "";
+        // for(var i = 0; i < data.current.daily.length; i++)
+        let dateObj =new Date((data.daily[2].dt) * 1000);
+        let utcString = dateObj.toUTCString();
+        let time = utcString.slice(-11, -4);
+        let description = data.daily[2].weather[0].description;
+        let humidity = data.daily[2].humidity;
+        let wind = data.daily[2].wind_speed;
+        let pressure = data.daily[2].pressure;
+
+        currentList +=
+            '<div class="card" id="currentWeather" style="width: 12rem;">' +
+            '<div class="card-body">' +
+            '<p>' + time + '</p>' +
+            '<p>' + description + '</p>' +
+            '<p>' + humidity + '</p>' +
+            '<p>' + wind + '</p>' +
+            '<p>' + pressure + '</p>' +
+            '</div>' + '</div>';
+
+        $("#dayThreeWeather").html(currentList)
+    }
+
+    function dayFour(data){
+        let currentList = "";
+        // for(var i = 0; i < data.current.daily.length; i++)
+        let dateObj =new Date((data.daily[3].dt) * 1000);
+        let utcString = dateObj.toUTCString();
+        let time = utcString.slice(-11, -4);
+        let description = data.daily[3].weather[0].description;
+        let humidity = data.daily[3].humidity;
+        let wind = data.daily[3].wind_speed;
+        let pressure = data.daily[3].pressure;
+
+        currentList +=
+            '<div class="card" id="currentWeather" style="width: 12rem;">' +
+            '<div class="card-body">' +
+            '<p>' + time + '</p>' +
+            '<p>' + description + '</p>' +
+            '<p>' + humidity + '</p>' +
+            '<p>' + wind + '</p>' +
+            '<p>' + pressure + '</p>' +
+            '</div>' + '</div>';
+
+        $("#dayFourWeather").html(currentList)
+    }
+
+
+
+
+
 
     // // geocode method to move to new location using listeners
     // let newLocation = document.querySelector('#mapSearch');
