@@ -40,16 +40,15 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand">Sunny Side Weather Depot</a>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex" role="">
+<!--            insert location tracker-->
         </form>
     </div>
 </nav>
 
 <div class="row">
     <div class="col-3"><div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
             <p class="card-text">Description:</p>
             <p class="card-text">Humidity:</p>
@@ -58,7 +57,7 @@
         </div>
     </div></div>
     <div class="col-3"><div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
             <p class="card-text">Description:</p>
             <p class="card-text">Humidity:</p>
@@ -67,7 +66,7 @@
         </div>
     </div></div>
     <div class="col-3"><div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
             <p class="card-text">Description:</p>
             <p class="card-text">Humidity:</p>
@@ -76,7 +75,7 @@
         </div>
     </div></div>
     <div class="col-3"><div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
             <p class="card-text">Description:</p>
             <p class="card-text">Humidity:</p>
@@ -85,18 +84,18 @@
         </div>
     </div></div>
     <div class="col-3"><div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
-            <p class="card-text">Description:</p>
-            <p class="card-text">Humidity:</p>
-            <p class="card-text">Wind:</p>
-            <p class="card-text">Pressure:</p>
+            <p class="card-text" id="description">Description:</p>
+            <p class="card-text" id="humidity">Humidity:</p>
+            <p class="card-text" id="wind">Wind:</p>
+            <p class="card-text" id="pressure">Pressure:</p>
         </div>
     </div></div>
 </div>
 
 <div id="weatherBody"></div>
-<div id='map' draggable="true" style='width: 800px; height: 700px;'></div>
+<div id='map' draggable="true" style='width: auto; height: 500px;'></div>
 <pre id = "coordinates" class="coordinates"></pre>
 
 
@@ -120,6 +119,11 @@
         style: 'mapbox://styles/mapbox/streets-v11',
     });
 
+    // requesting data from weather api
+    $.get(`https://api.openweathermap.org/data/3.0/onecall?lat=29.44554&lon=-95.387929&appid=${weatherKey}`).done(function(data) {
+        console.log(data);
+    })
+
     // geocode method to move to new location using listeners
     let newLocation = document.querySelector('#mapSearch');
     newLocation.addEventListener('change', function(e){
@@ -128,7 +132,7 @@
             map.setZoom(17);
             var newInfo = {
                 address: newLocation.value,
-                popupHTML: "<p>Why hello there</p>" + newLocation.value
+                popupHTML: "<p>Why hello there</p>"
             };
             //function for placing markers with geocode
             function placeMarkerAndPopup(info, token, map) {
@@ -179,24 +183,14 @@
     // });
 
 
-
-
-
-
-
-
-
-    console.log(newLocation);
-
-
 </script>
 
 <!--js for pulling in the data from weather api-->
 <script>
-    // requesting data from weather api
-    $.get(`https://api.openweathermap.org/data/3.0/onecall?lat=29.44555&lon=-95.387929&appid=${weatherKey}`).done(function(data) {
-        console.log(data);
-    })
+    // // requesting data from weather api
+    // $.get(`https://api.openweathermap.org/data/3.0/onecall?lat=29.44554&lon=-95.387929&appid=${weatherKey}`).done(function(data) {
+    //     console.log(data);
+    // })
 
 </script>
 
