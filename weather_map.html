@@ -80,7 +80,7 @@
 <!-- -Body-Bottom- -Body-Bottom- -Body-Bottom- -Body-Bottom- -Body-Bottom- -->
 </body>
 
-<!--js for mapping it out-->
+
 <script>
 
     myToken = "pk.eyJ1IjoidHRtZXNjYWwiLCJhIjoiY2xmOGdkMXJsMGY4cTNxbzFoYWVuN290ZyJ9.I3uIDu1U5DkPJ5Sylqbzzw";
@@ -99,23 +99,20 @@
     })
         .setLngLat([0, 0])
         .addTo(map);
+    // function onClick() {
     function onClick() {
-
-        let lngLat = marker.getLngLat();
-        $.ajax({
-            url: `https://api.openweathermap.org/data/3.0/onecall?lat=${lngLat.lat}&lon=${lngLat.lng}&unit=imperial&appid=${weatherKey}`
-        }).done(function (data) {
-            currentWeather(data);
-            dayOne(data);
-            dayTwo(data);
-            dayThree(data);
-            dayFour(data);
-        });
-        reverseGeocode(lngLat, token).then(function(result){
-            $('.tracker').html(result);
+        $(document).ready(function () {
+            $('#map').click(function (e) {
+                let lngLat = e.getlngLat();
+                marker.remove();
+                marker = new mapboxgl.Marker()
+                    .setLngLat(lngLat)
+                    .addTo(map);
+            });
         })
     }
-    marker.on('click', onClick);
+
+    // marker.on('click', onClick);
     function onDragEnd() {
         let lngLat = marker.getLngLat();
         $.ajax({
