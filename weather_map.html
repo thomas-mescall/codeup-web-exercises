@@ -50,7 +50,7 @@
 
 <br>
 <br>
-
+<!--weather updates-->
 <div class="row">
     <div class="col-2 border border-primary">
         <div id="currentWeather"></div>
@@ -74,15 +74,12 @@
 <pre id = "coordinates" class="coordinates"></pre>
 
 
-
-
-
 <!-- -Body-Bottom- -Body-Bottom- -Body-Bottom- -Body-Bottom- -Body-Bottom- -->
 </body>
 
 
 <script>
-
+//creating map, token, marker
     myToken = "pk.eyJ1IjoidHRtZXNjYWwiLCJhIjoiY2xmOGdkMXJsMGY4cTNxbzFoYWVuN290ZyJ9.I3uIDu1U5DkPJ5Sylqbzzw";
 
     var token = mapboxgl.accessToken = myToken;
@@ -99,20 +96,8 @@
     })
         .setLngLat([0, 0])
         .addTo(map);
-    // function onClick() {
-    function onClick() {
-        $(document).ready(function () {
-            $('#map').click(function (e) {
-                let lngLat = e.getlngLat();
-                marker.remove();
-                marker = new mapboxgl.Marker()
-                    .setLngLat(lngLat)
-                    .addTo(map);
-            });
-        })
-    }
 
-    // marker.on('click', onClick);
+//creating function for what to do when drag stops
     function onDragEnd() {
         let lngLat = marker.getLngLat();
         $.ajax({
@@ -131,6 +116,7 @@
     }
     marker.on('dragend', onDragEnd);
 
+    //creating listener w/ geo to fly to new location
     let newLocation = document.querySelector('#mapSearch');
     newLocation.addEventListener('change', function (){
         geocode(newLocation.value, token).then(function (results) {
@@ -152,15 +138,6 @@
             $('.tracker').html(newLocation.value);
         });
     });
-
-    let dateConversion = function(timeStamp) {
-        let date = new Date(timeStamp * 1000).toLocaleString("en-US", {
-            weekday: "short",
-            month: "short",
-            day: "numeric",
-        });
-        return date;
-    }
 
     function currentWeather(data){
         let currentList = "";
