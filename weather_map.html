@@ -116,7 +116,21 @@
     }
     marker.on('dragend', onDragEnd);
 
-    //creating listener w/ geo to fly to new location
+// creating an event listener to create a marker when map is clicked
+map.on('click', function (e) {
+    var newMarker = new mapboxgl.Marker({
+        draggable: true
+    }).setLngLat(e.lngLat)
+        .addTo(map);
+    marker.remove();
+    marker = newMarker;
+
+    onDragEnd();
+    marker.on('dragend', onDragEnd);
+});
+
+
+//creating listener w/ geo to fly to new location
     let newLocation = document.querySelector('#mapSearch');
     newLocation.addEventListener('change', function (){
         geocode(newLocation.value, token).then(function (results) {
