@@ -59,11 +59,20 @@ let totalAvg = totalYears / users.length;
 console.log(totalAvg);
 
 //Q5
-let longestE = users.reduce(function (acc, user){
-    console.log(acc);
-    console.log(user);
-    if(user.email.length > acc.length) {
-        user.email;
+let longestE = emailUsers.reduce(function (acc, email){
+    if(email.length > acc.length) {
+        return email;
+    } else {
+        return acc;
     };
-}, " | ")
+}, "")
 console.log(longestE);
+//Q6
+let nameList = users.reduce(function (acc, user){
+    if(acc === "") {
+      return user.name;
+    } else {
+        return acc + ", " + user.name;
+    }
+},"");
+console.log(nameList);
