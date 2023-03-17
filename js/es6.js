@@ -46,11 +46,11 @@ const name = 'tom';
 //     languages: languages
 // });
 
-let users = {
+let users.push({
     name,
     email,
     languages
-};
+)};
 
 // TODO: replace `var` with `let` in the following variable declarations
 let emails = [];
